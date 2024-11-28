@@ -1,13 +1,13 @@
 .about-section {
-    position: relative; /* Keeps the section in document flow */
-    width: 100%;
-    max-width: 1280px;
-    margin: 50px auto; /* Dynamic spacing from other sections */
-    padding: 20px;
-    background: #100C08;
-    overflow: hidden; /* Hides any overflow without affecting scrolling */
-  }
-  
+  position: relative; /* Keeps the section in document flow */
+  width: 100%;
+  max-width: 1280px;
+  margin: 50px auto; /* Dynamic spacing from other sections */
+  padding: 20px;
+  background: #100C08;
+  overflow-x: hidden; /* Only hides horizontal overflow to allow vertical scrolling */
+}
+
   .about-content {
     padding: 27px 21px;
   }
@@ -65,8 +65,10 @@
     position: absolute;
     right: 0;
     top: 150px;
-    width: 467px;
-    height: 100%;
+    width: 100%; /* Make it responsive */
+    max-width: 467px;
+    height: auto;
+    overflow: hidden; /* Ensure no overflow from decorative elements */
   }
   .decorative-image img {
     display: block;
@@ -83,26 +85,6 @@
     top: 225px;
   }
   
-  .frame-10, .frame-11 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 231px;
-    height: 112px;
-    background: #F5F5F5;
-    border: 1px solid #F5F5F5;
-    border-radius: 68px;
-  }
-  
-  .frame-10 {
-    left: 851px;
-    top: 579px;
-  }
-  
-  .frame-11 {
-    left: 972px;
-    top: 456px;
-    transform: rotate(-90deg);
-  }
   
   /* Responsive Adjustments */
   @media (max-width: 1024px) {

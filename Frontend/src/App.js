@@ -2,6 +2,7 @@ import * as React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
+import Service from "./components/Service";
 
 export default function Layout() {
 
@@ -16,7 +17,9 @@ export default function Layout() {
         <div className="AboutUs-section">
         <AboutUs />
         </div>
-        
+        {/* <div className="Services-section">
+        <Service />
+        </div> */}
       </main>
     </div>
   );
