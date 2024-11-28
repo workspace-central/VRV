@@ -2,7 +2,7 @@ import React from "react";
 
 const Service = () => {
   return (
-    <div className="service-section">
+    <section id = "services" className="service-section">
       <div className="service-header">
         <h3>Services We Offer</h3>
         <h1>Certified Excellence</h1>
@@ -178,7 +178,7 @@ const Service = () => {
           text-align: justify;
         }
       `}</style>
-    </div>
+    </section>
   );
 };
 
