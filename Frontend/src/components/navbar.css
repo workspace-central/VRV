@@ -1,0 +1,146 @@
+.card {
+    width: 100%;
+    max-width: 1280px;
+    height: 78.69px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 33.7237px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .card-body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    width: 70px;
+    height: 70px;
+    background: url('logo.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+    margin-left: -8rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+  }
+  
+  .nav-link.active {
+    font-weight: 700;
+  }
+  
+  .contact-button {
+    padding: 0.5rem 1rem;
+    background: #ffffff;
+    border-radius: 16.8618px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    color: #100C08;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: -1rem;
+  }
+  
+  .contact-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.6);
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .logo {
+      margin: 0 auto 1rem auto;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .nav-link {
+      font-size: 16px;
+    }
+  
+    .contact-button {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+  
+  /* Tablet Styles */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .card {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .nav-links {
+      gap: 1.5rem;
+    }
+  
+    .nav-link {
+      font-size: 18px;
+    }
+  
+    .contact-button {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 1025px) {
+    .card {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+  
+    .nav-links {
+      gap: 2rem;
+    }
+  
+    .nav-link {
+      font-size: 20px;
+    }
+  
+    .contact-button {
+      padding: 0.5rem 2rem;
+    }
+  }
+  
