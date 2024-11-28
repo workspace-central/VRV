@@ -17,8 +17,6 @@ const Service = () => {
         </div>
       </div>
 
-      
-      
       <div className="service-cards">
         <div className="service-card infrastructure">
           <h2>Enterprise Infrastructure VAPT</h2>
@@ -33,86 +31,87 @@ const Service = () => {
 
       <style jsx>{`
         .service-section {
-          position: relative;
-          width: 1280px;
-          height: 1071px;
-          margin: 0 auto;
-          background: #F5F5F5;
-          padding: 48px 16px;
-        }
+  position: relative;
+  width: 1280px;
+  height: 1071px;
+  margin: 0 auto;
+  background: #F5F5F5;
+  padding: 48px 16px;
+}
 
-        .service-header h3 {
-          font-family: 'Inter';
-          font-weight: 700;
-          font-size: 20px;
-          color: #000000;
-        }
+.service-header h3 {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 20px;
+  color: #000000;
+}
 
-        .service-header h1 {
-          font-family: 'Inter';
-          font-weight: 600;
-          font-size: 80px;
-          line-height: 113%;
-          color: #000000;
-          max-width: 418px;
-          margin-top: 30px;
-        }
+.service-header h1 {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 113%;
+  color: #000000;
+  max-width: 418px;
+  margin-top: 30px;
+}
 
-        .service-intro {
-          position: absolute;
-          right: 16px;
-          top: 126px;
-          max-width: 397px;
-        }
+.service-intro {
+  position: absolute;
+  right: 16px;
+  top: 126px;
+  max-width: 397px;
+}
 
-        .view-services {
-          margin-top: 24px;
-          font-weight: 700;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-        }
+.view-services {
+  margin-top: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-        .arrow {
-          width: 5px;
-          height: 8px;
-          border: 2px solid #000000;
-        }
+.arrow {
+  width: 5px;
+  height: 8px;
+  border: 2px solid #000000;
+}
 
-        .service-cards {
-          display: flex;
-          gap: 32px;
-          margin-top: 570px;
-        }
+.service-cards {
+  display: flex;
+  gap: 32px;
+  margin-top: 570px;
+}
 
-        .service-card {
-          padding: 40px;
-          color: #F5F5F5;
-          border-radius: 40px 0;
-          background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
-        }
+.service-card {
+  padding: 40px;
+  color: #F5F5F5;
+  border-radius: 40px 0;
+  background: #000000; /* Black background for all cards */
+}
 
-        .service-card.infrastructure {
-          width: 466px;
-        }
+.service-card.infrastructure {
+  width: 466px;
+}
 
-        .service-card.monitoring {
-          width: 749px;
-          border-radius: 0 40px;
-        }
+.service-card.monitoring {
+  width: 749px;
+  border-radius: 0 40px;
+}
 
-        .service-card h2 {
-          font-family: 'Inter';
-          font-weight: 700;
-          font-size: 32px;
-          margin-bottom: 16px;
-        }
+.service-card h2 {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
 
-        .service-card p {
-          font-size: 16px;
-          line-height: 150%;
-          text-align: justify;
-        }
+.service-card p {
+  font-size: 16px;
+  line-height: 150%;
+  text-align: justify;
+}
+
       `}</style>
     </div>
   );

@@ -14,7 +14,7 @@ export default function Card() {
         <div className="nav-links">
           <a href="#home" className="nav-link active">Home</a>
           <a href="#about-us" className="nav-link">About Us</a>
-          <a href="#services" className="nav-link">Services</a>
+          <a href="#service-section" className="nav-link">Services</a>
           
           <a href="#testimonials" className="nav-link">Clients</a>
         </div>

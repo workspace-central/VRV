@@ -17,9 +17,9 @@ export default function Layout() {
         <div className="AboutUs-section">
         <AboutUs />
         </div>
-        {/* <div className="Services-section">
+        <div className="Services-section">
         <Service />
-        </div> */}
+        </div>
       </main>
     </div>
   );
