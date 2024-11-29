@@ -26,6 +26,7 @@
   }
   
   .logo {
+    display: block;
     width: 70px;
     height: 70px;
     background: url('logo.png') no-repeat center center;
@@ -82,7 +83,7 @@
   .card {
     flex-direction: column;  /* Stack elements vertically */
     height: auto;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
     border-radius: 16px;  /* Slightly smaller rounded corners for tablets */
   }
@@ -130,6 +131,130 @@
   .contact-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 204, 0, 0.6);
+  }
+}
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .nav-link {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  margin: 1rem 0;
+  transition: color 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+  color: #ffcc00;
+}
+
+.sidebar .close-button {
+  align-self: flex-end;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Default: Hide the contact button in the navbar */
+.contact-button.desktop-only {
+  display: none;
+}
+
+/* Show the contact button in the sidebar */
+.contact-button.mobile-only {
+  display: none;
+}
+
+/* Hide the sidebar logo by default */
+
+
+
+/* Mobile View: Adjust visibility */
+@media (max-width: 768px) {
+  /* Hide the navbar logo */
+  .card .logo {
+      display: none;
+  }
+
+  /* Show the sidebar logo */
+  .sidebar .logo {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url('logo.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+    margin-left: -8rem;
+  }
+}
+
+/* Tablet and desktop view: Show the navbar's contact button */
+@media (min-width: 769px) {
+  .contact-button.desktop-only {
+    display: block;
+  }
+}
+
+/* Mobile view: Show the sidebar's contact button */
+@media (max-width: 768px) {
+  .contact-button.mobile-only {
+    display: block;
+  }
+}
+
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .card {
+    position: relative;
   }
 }
 

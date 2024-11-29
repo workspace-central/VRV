@@ -3,7 +3,7 @@ import "./hero.css";
 
 export default function Hero() {
   return (
-    <section className="hero-section" role="banner">
+    <section id = "home" className="hero-section" role="banner">
       <h1 className="hero-title">
         <span className="font-bold">Powering Your</span>{" "}
         <span className="italic">Growth</span>{" "}
