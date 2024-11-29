@@ -5,6 +5,7 @@
     min-height: 100vh;
     background: url('4.png') no-repeat center center;
     background-size: cover;
+    background-attachment: fixed; /* Prevent background duplication */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,6 +15,7 @@
     box-sizing: border-box;
     overflow: hidden;
 }
+
 
 .hero-title {
     width: min(90%, 857px);
