@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import Service from "./components/Service";
+// import Footer from "./components/Foot";
 
 export default function Layout() {
 
@@ -20,6 +21,9 @@ export default function Layout() {
         <div className="Services-section">
         <Service />
         </div>
+        {/* <div className="Footer-section">
+        <Footer/>
+        </div> */}
       </main>
     </div>
   );

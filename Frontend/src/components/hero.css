@@ -195,8 +195,8 @@
     }
 
     .mouse-icon .mouse {
-        width: clamp(15px, 3vw, 30px); /* Further scale down */
-        height: clamp(30px, 5vw, 45px); /* Further scale down */
+        width: clamp(28px, 11vw, 30px);
+        height: clamp(50px, -49vw, 45px); /* Further scale down */
     }
 
     .mouse-icon .scroll-wheel {

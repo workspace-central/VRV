@@ -4,6 +4,7 @@
   max-width: 1280px;
   margin: 50px auto; /* Dynamic spacing from other sections */
   padding: 20px;
+  box-sizing: border-box;
   background: #100C08;
   overflow-x: hidden; /* Only hides horizontal overflow to allow vertical scrolling */
 }
