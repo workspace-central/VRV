@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import "./header.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Card() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
+  };
+
+  const goToContactPage = () => {
+    navigate("/contact"); // Replace "/contact" with your desired route
   };
 
   return (
@@ -39,7 +45,12 @@ export default function Card() {
           </div>
 
           {/* "Contact Us" button */}
-          <button className="contact-button desktop-only">Contact Us</button>
+          <button
+            className="contact-button desktop-only"
+            onClick={goToContactPage}
+          >
+            Contact Us
+          </button>
         </div>
       </div>
 
