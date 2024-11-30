@@ -85,6 +85,53 @@
     margin-bottom: 10px;
 }
 
+.support-section-box {
+    background: #1c1c1c; /* Dark background for contrast */
+    border: 1px solid white; /* Optional border for definition */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Space inside the box */
+    margin-top: 20px; /* Space from the content above */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  /* Support Section Styling */
+  .support-section {
+    color: #f5f5f5;
+  }
+  
+
+.line-right-container {
+    display: flex; /* Make the container a flexbox */
+    align-items: center; /* Vertically align the line-right with the text */
+  }
+  
+  h2 {
+    margin: 0; /* Remove any default margins */
+    font-size: 24px; /* Adjust as needed */
+    color: white;
+  }
+  
+  .line-right {
+    display: flex; /* Make line-right a flexbox for the line and circle */
+    align-items: center; /* Vertically align the circle and line */
+    margin-left: 10px; /* Add spacing between "Support" and the line */
+  }
+  
+  .circle {
+    width: 10px; /* Adjust size */
+    height: 10px; /* Adjust size */
+    background-color: white; /* Circle color */
+    border-radius: 50%; /* Make it circular */
+  }
+  
+  .line {
+    width: 224px; /* Adjust width */
+    height: 2px; /* Adjust thickness */
+    background-color: white; /* Line color */
+    margin-left: 8px; /* Add spacing between circle and line */
+  }
+  
+
 .chat-button {
     background-color: white;
     color: black;
