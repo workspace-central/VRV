@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./navbar.css";
+import "./header.css";
 
 export default function Card() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -11,17 +11,16 @@ export default function Card() {
   return (
     <div>
       {/* Navbar */}
+      {/* Hamburger Menu */}
+      <div className="hamburger" onClick={toggleSidebar}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
       <div className="card">
         <div className="card-body">
           <div className="logo-container">
             <div className="logo"></div>
-          </div>
-
-          {/* Hamburger Menu */}
-          <div className="hamburger" onClick={toggleSidebar}>
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
           </div>
 
           <div className="nav-links">
@@ -50,7 +49,7 @@ export default function Card() {
         <span className="close-button" onClick={toggleSidebar}>
           &times;
         </span>
-        <a href="#home" className="nav-link">
+        <a href="#home" className="nav-link active">
           Home
         </a>
         <a href="#about-us" className="nav-link">

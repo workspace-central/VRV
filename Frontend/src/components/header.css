@@ -56,7 +56,9 @@
   
   .nav-link.active {
     font-weight: 700;
+    color: yellow;
   }
+  
   
   .contact-button {
     padding: 0.5rem 1rem;
@@ -86,6 +88,7 @@
     padding: 2rem;
     text-align: center;
     border-radius: 16px;  /* Slightly smaller rounded corners for tablets */
+    left: -9rem;
   }
 
   .logo {
@@ -118,6 +121,7 @@
 
   .nav-link.active {
     font-weight: 700;  /* Bold active link */
+    color: yellow;
   }
 
   .contact-button {
@@ -138,7 +142,7 @@
   position: fixed;
   top: 0;
   left: -100%;
-  width: 250px;
+  width: 195px;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
@@ -179,8 +183,8 @@
   display: none;
   position: absolute;
   top: 1rem;
-  right: 1rem;
-  z-index: 1100;
+  left: 1rem;
+  /* z-index: 1100; */
   cursor: pointer;
 }
 
@@ -214,6 +218,10 @@
       display: none;
   }
 
+  .card{
+    display: none;
+  }
+
   /* Show the sidebar logo */
   .sidebar .logo {
     display: block;
@@ -225,6 +233,7 @@
     margin-right: 1rem;
     margin-left: -8rem;
   }
+  
 }
 
 /* Tablet and desktop view: Show the navbar's contact button */
