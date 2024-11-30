@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import Service from "./components/Service";
 // import Footer from "./components/Foot";
+import Trusted from './components/Trusted';
 
 export default function Layout() {
 
@@ -13,6 +14,10 @@ export default function Layout() {
         <div className="hero-section">
         <Header />
         <Hero />
+        </div>
+
+        <div className="Client-section">
+        <Trusted />
         </div>
         
         <div className="AboutUs-section">
