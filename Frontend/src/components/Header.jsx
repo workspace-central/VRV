@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import "./header.css";
-import { useNavigate } from "react-router-dom";
 
-export default function Card() {
+export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -10,13 +10,17 @@ export default function Card() {
     setSidebarOpen(!sidebarOpen);
   };
 
-  const goToContactPage = () => {
-    navigate("/contact"); // Replace "/contact" with your desired route
+  const navigateToSection = (hash) => {
+    if (window.location.pathname !== "/") {
+      navigate("/");
+    }
+    setTimeout(() => {
+      document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+    }, 100); // Ensure the home page is loaded before scrolling
   };
 
   return (
     <div>
-      {/* Navbar */}
       {/* Hamburger Menu */}
       <div className="hamburger" onClick={toggleSidebar}>
         <span className="bar"></span>
@@ -30,24 +34,33 @@ export default function Card() {
           </div>
 
           <div className="nav-links">
-            <a href="#home" className="nav-link active">
+            <Link to="/" className="nav-link">
               Home
-            </a>
-            <a href="#about-us" className="nav-link">
+            </Link>
+            <span
+              className="nav-link"
+              onClick={() => navigateToSection("#about-us")}
+            >
               About Us
-            </a>
-            <a href="#services" className="nav-link">
+            </span>
+            <span
+              className="nav-link"
+              onClick={() => navigateToSection("#services")}
+            >
               Services
-            </a>
-            <a href="#testimonials" className="nav-link">
+            </span>
+            <span
+              className="nav-link"
+              onClick={() => navigateToSection("#testimonials")}
+            >
               Clients
-            </a>
+            </span>
           </div>
 
           {/* "Contact Us" button */}
           <button
             className="contact-button desktop-only"
-            onClick={goToContactPage}
+            onClick={() => navigate("/contact")}
           >
             Contact Us
           </button>
@@ -56,23 +69,37 @@ export default function Card() {
 
       {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
-        <div className="logo"></div> {/* Sidebar logo */}
+        <div className="logo"></div>
         <span className="close-button" onClick={toggleSidebar}>
           &times;
         </span>
-        <a href="#home" className="nav-link active">
+        <Link to="/" className="nav-link">
           Home
-        </a>
-        <a href="#about-us" className="nav-link">
+        </Link>
+        <span
+          className="nav-link"
+          onClick={() => navigateToSection("#about-us")}
+        >
           About Us
-        </a>
-        <a href="#services" className="nav-link">
+        </span>
+        <span
+          className="nav-link"
+          onClick={() => navigateToSection("#services")}
+        >
           Services
-        </a>
-        <a href="#testimonials" className="nav-link">
+        </span>
+        <span
+          className="nav-link"
+          onClick={() => navigateToSection("#testimonials")}
+        >
           Clients
-        </a>
-        <button className="contact-button mobile-only">Contact Us</button>
+        </span>
+        <button
+          className="contact-button mobile-only"
+          onClick={() => navigate("/contact")}
+        >
+          Contact Us
+        </button>
       </div>
     </div>
   );

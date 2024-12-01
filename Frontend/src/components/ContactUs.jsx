@@ -63,7 +63,7 @@ const ContactUs = () => {
           </p>
           <div className="support-section-box">
           <div className="cybersecurity-section">
-            <img src="/assets/6.png" alt="Decorative Element" />
+            <img src="/assets/6.png" alt="Decorative Element" className="small-img"/>
             <h2>Operation-Centric Cybersecurity</h2>
             <p>
             At VRV Security, we embed advanced security measures directly into your critical workflows, ensuring seamless protection against evolving threats. Our operation-focused approach safeguards data, systems, and processes while maintaining business continuity. With real-time threat detection and tailored solutions, we align security with your operations to empower your success in a digital-first world.
