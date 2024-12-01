@@ -5,6 +5,8 @@
   padding: 40px 16px;
   color: #F5F5F5;
   font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .clients-content {
@@ -12,6 +14,8 @@
   margin: 0 auto;
   position: relative;
   padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .clients-title {
@@ -39,6 +43,8 @@
   gap: 90px; /* Adjust as needed */
   position: relative;
   transform: translateZ(0);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .client-card {
@@ -48,6 +54,8 @@
   padding: 24px;
   position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 .client-header {
   display: flex;
@@ -105,14 +113,90 @@
   pointer-events: none; /* Ensure it doesn’t block interactions */
 }
 
-/* Connecting lines between testimonials */
-/* .clients-list::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  border-left: 2px dashed rgba(255, 255, 255, 0.2);
-  transform: translateX(-50%);
-  z-index: -1;
-} */
+@media (max-width: 1024px) { /* Tablet Screens */
+  .clients-section {
+    width: 100%;
+    padding: 32px 12px;
+  }
+
+  .clients-title {
+    font-size: 36px;
+  }
+
+  .clients-description {
+    font-size: 14px;
+    max-width: 90%;
+  }
+
+  .clients-list {
+    grid-template-columns: 1fr; /* Single-column layout for smaller tablets */
+    gap: 60px;
+  }
+
+  .client-card {
+    padding: 20px;
+  }
+
+  .client-header h3 {
+    font-size: 14px;
+  }
+
+  .client-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) { /* Mobile Screens */
+  .clients-title {
+    font-size: 28px;
+  }
+
+  .clients-description {
+    font-size: 13px;
+    margin: 16px auto 24px auto;
+  }
+
+  .clients-list {
+    gap: 30px;
+  }
+
+  .client-card {
+    padding: 16px;
+  }
+
+  .client-header h3 {
+    font-size: 13px;
+  }
+
+  .client-card p {
+    font-size: 13px;
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 480px) { /* Small Mobile Screens */
+  .clients-title {
+    font-size: 24px;
+  }
+
+  .clients-description {
+    font-size: 12px;
+    margin: 16px auto 24px auto;
+  }
+
+  .clients-list {
+    gap: 20px;
+  }
+
+  .client-card {
+    padding: 12px;
+  }
+
+  .client-header h3 {
+    font-size: 12px;
+  }
+
+  .client-card p {
+    font-size: 12px;
+  }
+}
