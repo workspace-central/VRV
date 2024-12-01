@@ -1,83 +1,110 @@
-import React from "react";
-import "./Service.css"; // Import the external CSS file
+import React, { useState } from 'react';
 
-const Service = () => {
-  return (
-    <section id="services" className="service-section">
-      <div className="service-header">
-        <h3>Services We Offer</h3>
-        <h1>Certified Excellence</h1>
+const NewsletterSignup = () => {
+    const [email, setEmail] = useState('');
+    const [submitted, setSubmitted] = useState(false);
 
-        <div className="service-intro">
-          <p>
-            Our cutting-edge cybersecurity solutions leverage AI and cloud
-            technologies, customized to secure today's digital infrastructure
-            effectively.
-          </p>
-          <div className="view-services">
-            <span>View all services</span>
-            <div className="arrow"></div>
-          </div>
-        </div>
-      </div>
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(`Email submitted: ${email}`);
+        setSubmitted(true);
+        setEmail('');
+    };
 
-      <div className="service-cards">
-        {/* First Row of Cards */}
-        <div className="service-row">
-          <div className="service-card cloud-security">
-            <h2>AI-Powered VAPT</h2>
-            <p>
-              AI-powered solutions revolutionize threat management by identifying
-              vulnerabilities in real time and automating responses. With machine
-              learning and predictive analytics, they detect anomalies, prioritize
-              risks, and prevent potential exploits. Continuously adapting to
-              emerging threats, AI ensures robust and proactive security. This
-              fusion of intelligence and automation safeguards systems efficiently.
-            </p>
-          </div>
-          <div className="service-card compliance">
-            <h2>Cloud Infrastructure VAPT</h2>
-            <p>
-              Strengthening cloud security begins with detailed vulnerability
-              assessments to identify potential risks and weaknesses. AI-driven
-              tools enhance detection, prioritize threats, and automate remediation
-              efforts to safeguard cloud environments. Proactive monitoring ensures
-              the protection of sensitive data and applications from evolving
-              cyberattacks. This comprehensive approach fortifies trust and
-              resilience in cloud operations.
-            </p>
-          </div>
-        </div>
-
-        {/* Second Row of Cards */}
-        <div className="service-row">
-          <div className="service-card infrastructure">
-            <h2>Enterprise Infrastructure VAPT</h2>
-            <p>
-              Tailored VAPT solutions for complex enterprise systems combine advanced
-              testing methodologies and automation to uncover vulnerabilities. By
-              simulating real-world attack scenarios, these solutions prevent
-              unauthorized access, protect sensitive data, and ensure compliance
-              with security standards.
-            </p>
-          </div>
-
-          <div className="service-card monitoring">
-            <h2>24/7 Threat Monitoring & SOC</h2>
-            <p>
-              Around-the-clock monitoring ensures real-time visibility into potential
-              threats, enabling swift detection and response. Advanced analytics and
-              incident response strategies mitigate risks, minimizing downtime and
-              impact on operations. This proactive approach safeguards businesses
-              against evolving cyber threats, fostering resilience and trust.
-              Integrated threat intelligence enhances decision-making, enabling
-              preemptive action against sophisticated cyberattacks.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+    return (
+        <section id="newsletter-signup" style={styles.container}>
+            <div style={styles.left}>
+                <h2 style={styles.title}>Join Our Newsletter Community</h2>
+            </div>
+            <div style={styles.right}>
+                <p style={styles.description}>
+                    Stay informed with the latest security insights, threat updates, 
+                    and exclusive offers delivered straight to your inbox! Sign up now 
+                    to ensure you never miss an essential update in cybersecurity!
+                </p>
+                {submitted ? (
+                    <p style={styles.successMessage}>Thank you for signing up!</p>
+                ) : (
+                    <form onSubmit={handleSubmit} style={styles.form}>
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email" 
+                            value={email} 
+                            onChange={(e) => setEmail(e.target.value)} 
+                            style={styles.input}
+                            required
+                        />
+                        <button type="submit" style={styles.button}>Join Now</button>
+                    </form>
+                )}
+                <p style={styles.terms}>
+                    By clicking Sign Up you're confirming that you agree with our 
+                    <a href="/terms" style={styles.link}> Terms and Conditions</a>.
+                </p>
+            </div>
+        </section>
+    );
 };
 
-export default Service;
+const styles = {
+    container: {
+        display: 'flex',
+        backgroundColor: '#000',
+        color: '#fff',
+        padding: '20px',
+        borderRadius: '8px',
+        maxWidth: '800px',
+        margin: 'auto',
+    },
+    left: {
+        flex: 1,
+        textAlign: 'left',
+        paddingRight: '20px',
+    },
+    right: {
+        flex: 2,
+        textAlign: 'right',
+    },
+    title: {
+        fontSize: '2rem',
+        marginBottom: '10px',
+    },
+    description: {
+        marginBottom: '20px',
+    },
+    form: {
+        display: 'flex',
+        justifyContent: 'right',
+        marginBottom: '20px',
+    },
+    input: {
+        padding: '10px',
+        fontSize: '1rem',
+        border: 'none',
+        borderRadius: '4px',
+        marginRight: '10px',
+        flex: '1',
+    },
+    button: {
+        padding: '10px 20px',
+        fontSize: '1rem',
+        backgroundColor: '#fff',
+        color: '#000',
+        border: 'none',
+        borderRadius: '4px',
+        cursor: 'pointer',
+    },
+    successMessage: {
+        color: '#4CAF50',
+    },
+    terms: {
+        fontSize: '0.8rem',
+        marginTop: '10px',
+    },
+    link: {
+        color: '#fff',
+        textDecoration: 'underline',
+    },
+};
+
+export default NewsletterSignup;

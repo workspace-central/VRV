@@ -9,7 +9,7 @@ const clients = [
     service: 'Compliance audits and Endpoint security',
     description: 'VRV Security\'s compliance audits and endpoint security tools are robust and easy to integrate across teams. Their proactive updates and excellent support simplify cybersecurity and compliance management.',
     rating: 5,
-    image: 'Frontend/src/components/4.png', // Ensure this path is correct
+    image: 'Frontend/src/components/acuity-Insurance-logo.png', // Ensure this path is correct
   },
   {
     id: 2,
@@ -93,6 +93,15 @@ export default function Clients() {
           <img src='/assets/Clients.png' alt="Decorative Element" />
         </div>
       </div>
+      
+
+
+
+
+
+
+
+
     </section>
   );
 }
