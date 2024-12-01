@@ -6,6 +6,8 @@ import AboutUs from "./components/AboutUs";
 import Service from "./components/Service";
 import Contact from "./components/ContactUs";
 import Client from './components/Clients'; 
+// import FAQ from "./components/Faq";
+// import GlobalPresence from "./components/GlobalPresence";
 // import Footer from "./components/Foot";
 // import Trusted from './components/Trusted';
 
@@ -38,6 +40,14 @@ export default function Layout() {
                 <div className="Services-section">
                   <Service />
                 </div>
+
+                {/* <div className="Global-section">
+                  <GlobalPresence />
+                </div> */}
+                
+                {/* <div className="Faq-section">
+                  <FAQ />
+                </div> */}
 
                 <div className="Client-section">
                   <Client />
