@@ -5,6 +5,8 @@ import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import Service from "./components/Service";
 import Contact from "./components/ContactUs";
+import Faq from "./components/FAQ";
+//import Global from "./components/Global";
 // import Footer from "./components/Foot";
 // import Trusted from './components/Trusted';
 
@@ -42,6 +44,12 @@ export default function Layout() {
                 {/* <div className="Footer-section">
                   <Footer />
                 </div> */}
+
+
+                <div className="Faq-section">
+                  <Faq />
+                </div>
+
               </main>
             }
           />
