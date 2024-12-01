@@ -44,7 +44,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 1.5rem; /* Responsive font size */
-    line-height: 0.4; /* Adjusted line-height for better spacing */
+    line-height: 1.4; /* Adjusted line-height for better spacing */
     color: #F5F5F5;
   }
   
@@ -131,28 +131,76 @@
   @media (max-width: 480px) {
     .about-section {
       padding: 12px;
-      margin-top: 20px; /* Bring it closer on small screens */
+      margin: 20px auto;
+      text-align: center;
+      overflow-x: hidden;
+      max-height: 100vh;
+      overflow-y: auto;
     }
   
     .about-title {
       font-size: 1.5rem;
       text-align: center;
+      margin-bottom: 20px;
     }
   
     .about-description {
-      font-size: 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      text-align: justify;
+      overflow-wrap: break-word;
     }
   
     .content {
-      gap: 16px;
+      gap: 20px;
+      display: flex;
+      flex-wrap: wrap; /* Allow wrapping to the next row */
+      justify-content: space-between;
+      text-align: center;
+    }
+  
+    .content-item {
+      width: 48%; /* Adjust to fit two items in one row */
+      margin-bottom: 20px;
     }
   
     .content-item h3 {
       font-size: 1rem;
+      margin-bottom: 10px; /* Reduced margin-bottom to decrease spacing between h3 and p */
     }
   
     .content-item p {
-      font-size: 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      margin-top: 0; /* Remove any top margin on p tag to reduce space */
+    }
+  
+    /* Adjust the decorative image to be on the right */
+    .decorative-elements {
+      display: flex;
+      justify-content: space-between; /* Space out content and image */
+      align-items: center;
+      margin-top: 20px;
+      width: 100%;
+    }
+  
+    .decorative-image {
+      width: 40%; /* Adjust the image width */
+      height: auto;
+    }
+  
+    .decorative-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      margin: 193px;
+      margin-top: 101px;
+      overflow: hidden;
+      box-sizing: border-box;
     }
   }
+  
+  
   
