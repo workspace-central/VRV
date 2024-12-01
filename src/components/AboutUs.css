@@ -1,0 +1,158 @@
+.about-section {
+    position: relative; /* Keeps the section in document flow */
+    width: 100%;
+    max-width: 1280px;
+    margin: 50px auto; /* Dynamic spacing from other sections */
+    padding: 20px;
+    box-sizing: border-box;
+    background: #100C08;
+    overflow-x: hidden; /* Only hides horizontal overflow to allow vertical scrolling */
+  }
+  
+    .about-content {
+      padding: 27px 21px;
+    }
+    
+    .about-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 2.5rem; /* Responsive font size */
+      line-height: 1.2;
+      color: #F5F5F5;
+      margin-bottom: 50px;
+    }
+    
+    .about-description {
+      width: 100%;
+      max-width: 634px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1rem; /* Responsive font size */
+      line-height: 1.4;
+      text-align: justify;
+      color: #F5F5F5;
+      margin-bottom: 57px;
+    }
+    
+    .content-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px; /* Reduced gap between h3 and p */
+    }
+    
+    .content-item h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 1.5rem; /* Responsive font size */
+      line-height: 0.4; /* Adjusted line-height for better spacing */
+      color: #F5F5F5;
+    }
+    
+    .content-item p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1rem; /* Responsive font size */
+      line-height: 0.4;
+      color: #F5F5F5;
+    }
+  
+    
+    /* Decorative Elements */
+    .decorative-image {
+      position: relative; /* Ensure it respects parent flow */
+      margin-top: 70px; /* Adjust this value as needed */
+    }
+    .decorative-elements {
+      position: absolute;
+      right: 0;
+      top: 150px;
+      width: 100%; /* Make it responsive */
+      max-width: 467px;
+      height: auto;
+      overflow: hidden; /* Ensure no overflow from decorative elements */
+    }
+    .decorative-image img {
+      display: block;
+      max-width: 100%; /* Make the image responsive */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px; /* Optional: Add rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+    }
+    .main-vector {
+      position: absolute;
+      width: 467px;
+      height: 467px;
+      left: 734px;
+      top: 225px;
+    }
+    
+    
+    /* Responsive Adjustments */
+    @media (max-width: 1024px) {
+      .about-title {
+        font-size: 2rem;
+      }
+    
+      .about-description,
+      .content {
+        width: 100%;
+      }
+    
+      .decorative-elements {
+        display: none; /* Hide decorative elements on smaller screens */
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .about-section {
+        padding: 16px;
+        margin-top: 30px; /* Adjust spacing for smaller screens */
+      }
+    
+      .about-title {
+        font-size: 1.75rem;
+        margin-bottom: 30px;
+      }
+    
+      .about-description {
+        font-size: 0.875rem;
+        margin-bottom: 40px;
+      }
+    
+      .content-item h3 {
+        font-size: 1.25rem;
+      }
+    
+      .content-item p {
+        font-size: 0.875rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .about-section {
+        padding: 12px;
+        margin-top: 20px; /* Bring it closer on small screens */
+      }
+    
+      .about-title {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    
+      .about-description {
+        font-size: 0.75rem;
+      }
+    
+      .content {
+        gap: 16px;
+      }
+    
+      .content-item h3 {
+        font-size: 1rem;
+      }
+    
+      .content-item p {
+        font-size: 0.75rem;
+      }
+    }
+    

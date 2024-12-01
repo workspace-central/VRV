@@ -1,0 +1,126 @@
+.clients {
+    position: absolute;
+    width: 1440px;
+    height: 350px;
+    left: 0;
+    top: 847px;
+    background: #FFFFFF;
+  }
+  
+  .clients-header {
+    position: absolute;
+    width: 1021px;
+    height: 54px;
+    left: calc(50% - 1021px/2 - 0.5px);
+    top: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .clients-header h2 {
+    width: 474px;
+    height: 54px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 113%;
+    color: #100C08;
+    text-align: center;
+  }
+  
+  .line-left, .line-right {
+    position: relative;
+    width: 241px;
+    height: 17px;
+  }
+  
+  .line-right {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+  
+  .line {
+    position: absolute;
+    width: 224.01px;
+    height: 0;
+    border: 2px solid #000000;
+    top: 8px;
+  }
+  
+  .circle {
+    box-sizing: border-box;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    right: 0;
+    border: 2px solid #100C08;
+    border-radius: 50%;
+  }
+  
+  .slider {
+    position: absolute;
+    width: 1440px;
+    height: 116.34px;
+    left: calc(50% - 1440px/2);
+    top: 167px;
+    overflow: hidden;
+  }
+  
+  .slider-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+  }
+  
+  .frame {
+    position: relative;
+    width: 1310.73px;
+    height: 116.34px;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+  
+  .client-logo {
+    object-fit: contain;
+  }
+  
+  .ae {
+    width: 227.17px;
+    height: 65px;
+  }
+  
+  .acuity {
+    width: 155px;
+    height: 116.34px;
+  }
+  
+  .group-logo {
+    width: 310px;
+    height: 60.07px;
+    /* Add your group logo styling here */
+  }
+  
+  .lhn {
+    width: 153px;
+    height: 86.06px;
+  }
+  
+  .atkins {
+    width: 136.56px;
+    height: 76px;
+  }
+  
+  .vmart {
+    width: 149px;
+    height: 87.66px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1310.73px); /* Width of one frame */
+    }
+  }
