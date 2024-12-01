@@ -1,0 +1,118 @@
+.clients-section {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  color: #F5F5F5;
+  font-family: 'Inter', sans-serif;
+}
+
+.clients-content {
+  max-width: 1248px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+}
+
+.clients-title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 24px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 16px;
+}
+
+.clients-description {
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 736px;
+  margin: 20px auto 40px auto;
+  text-align: center;
+  color: rgba(245, 245, 245, 0.8);
+}
+
+.clients-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Ensure no fractional pixels */
+  gap: 90px; /* Adjust as needed */
+  position: relative;
+  transform: translateZ(0);
+}
+
+.client-card {
+  background: rgba(77, 77, 77, 0.3);
+  backdrop-filter: blur(17.5px);
+  border-radius: 15px;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.client-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.client-image {
+  width: 71px;
+  height: 40px;
+  border-radius: 21px;
+  object-fit: cover;
+}
+
+.client-header h3 {
+  font-weight: 700;
+  font-size: 15.68px;
+  line-height: 161%;
+  color: #FFF;
+}
+
+.rating {
+  color: #FFCB45;
+  margin-bottom: 8px;
+}
+
+.client-card h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.client-card p {
+  font-size: 16px;
+  line-height: 140%;
+  text-align: justify;
+  color: rgba(245, 245, 245, 0.8);
+}
+
+/* Adding corner decorative lines */
+
+.client-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 1px; /* Thickness of the border */
+  background: linear-gradient(to right, grey, rgba(218, 165, 32, 0));
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude; /* For non-webkit browsers */
+  pointer-events: none; /* Ensure it doesn’t block interactions */
+}
+
+/* Connecting lines between testimonials */
+/* .clients-list::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 2px dashed rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%);
+  z-index: -1;
+} */

@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import Service from "./components/Service";
 import Contact from "./components/ContactUs";
+import Client from './components/Clients'; 
 // import Footer from "./components/Foot";
 // import Trusted from './components/Trusted';
 
@@ -36,6 +37,10 @@ export default function Layout() {
                 {/* Services Section */}
                 <div className="Services-section">
                   <Service />
+                </div>
+
+                <div className="Client-section">
+                  <Client />
                 </div>
 
                 {/* Footer Section */}
