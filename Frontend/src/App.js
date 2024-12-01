@@ -42,9 +42,7 @@ export default function Layout() {
               </main>
             }
           />
-           <div>
-            <NewsletterSignup />
-        </div>
+          
 
           {/* Contact Us Route */}
           <Route path="/contact" element={<Contact />} />
