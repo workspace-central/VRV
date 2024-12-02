@@ -6,6 +6,7 @@ import AboutUs from "./components/AboutUs";
 import Service from "./components/Service";
 import Contact from "./components/ContactUs";
 import Faq from "./components/FAQ";
+import GlobalPresence from "./components/Map.tsx";
 //import Global from "./components/Global";
 // import Footer from "./components/Foot";
 // import Trusted from './components/Trusted';
@@ -45,11 +46,13 @@ export default function Layout() {
                   <Footer />
                 </div> */}
 
+                <div className="global-presence">
+                  <GlobalPresence />
+                </div>
 
                 <div className="Faq-section">
                   <Faq />
                 </div>
-
               </main>
             }
           />
