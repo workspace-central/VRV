@@ -8,8 +8,8 @@ import Contact from "./components/ContactUs";
 import Client from './components/Clients'; 
 // import FAQ from "./components/Faq";
 // import GlobalPresence from "./components/GlobalPresence";
-// import Footer from "./components/Foot";
-// import Trusted from './components/Trusted';
+import Footer from "./components/Foot";
+import Trusted from './components/Trusted';
 
 export default function Layout() {
   return (
@@ -27,9 +27,9 @@ export default function Layout() {
                 </div>
 
                 {/* Trusted Section */}
-                {/* <div className="Client-section">
+                <div className="Client-section">
                   <Trusted />
-                </div> */}
+                </div>
 
                 {/* About Us Section */}
                 <div className="AboutUs-section">
@@ -54,9 +54,9 @@ export default function Layout() {
                 </div>
 
                 {/* Footer Section */}
-                {/* <div className="Footer-section">
+                <div className="Footer-section">
                   <Footer />
-                </div> */}
+                </div>
               </main>
             }
           />

@@ -65,7 +65,9 @@ export default function Header() {
             Contact Us
           </button>
         </div>
+        
       </div>
+
 
       {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>

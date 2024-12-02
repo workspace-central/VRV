@@ -1,126 +1,174 @@
-.clients {
-    position: absolute;
-    width: 1440px;
-    height: 350px;
-    left: 0;
-    top: 847px;
-    background: #FFFFFF;
+/* Trusted Section */
+.trusted-section {
+  background-color: white;
+  padding: 40px 1px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.line-left,
+.line-right {
+  position: relative;
+  width: 241px;
+  height: 17px;
+}
+
+.line-right {
+  transform: scaleX(-1);
+}
+
+.line {
+  position: absolute;
+  width: 210px;
+  height: 0;
+  border: 2px solid #000;
+  top: 8px;
+}
+
+.circle {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #100C08;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+}
+
+/* Logos Container */
+.logos-container {
+  overflow: hidden;
+  margin-top: 40px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logos-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll-left 15s linear infinite;
+}
+
+.logo-item {
+  width: 150px;
+  height: 100px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-item img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
   }
-  
-  .clients-header {
-    position: absolute;
-    width: 1021px;
-    height: 54px;
-    left: calc(50% - 1021px/2 - 0.5px);
-    top: 71px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  to {
+    transform: translateX(-50%);
   }
-  
-  .clients-header h2 {
-    width: 474px;
-    height: 54px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 113%;
-    color: #100C08;
+}
+
+/* Responsive Design */
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+  .header {
+    gap: 5px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .line-left,
+  .line-right {
+    width: 200px;
+    height: 15px;
+  }
+
+  .line {
+    width: 180px;
+    top: 6px;
+  }
+
+  .circle {
+    width: 12px;
+    height: 12px;
+  }
+
+  .logos-container {
+    padding: 0 20px;
+  }
+
+  .logo-item {
+    width: 120px;
+    height: 80px;
+    padding: 8px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .title {
+    font-size: 1.25rem;
     text-align: center;
   }
-  
-  .line-left, .line-right {
-    position: relative;
-    width: 241px;
-    height: 17px;
-  }
-  
+
+  .line-left,
   .line-right {
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    width: 150px;
+    height: 12px;
   }
-  
+
   .line {
-    position: absolute;
-    width: 224.01px;
-    height: 0;
-    border: 2px solid #000000;
-    top: 8px;
+    width: 126px;
+    top: 5px;
   }
-  
+
   .circle {
-    box-sizing: border-box;
-    position: absolute;
-    width: 17px;
-    height: 17px;
-    right: 0;
-    border: 2px solid #100C08;
-    border-radius: 50%;
+    width: 10px;
+    height: 10px;
   }
-  
-  .slider {
-    position: absolute;
-    width: 1440px;
-    height: 116.34px;
-    left: calc(50% - 1440px/2);
-    top: 167px;
-    overflow: hidden;
+
+  .logos-container {
+    padding: 0 10px;
   }
-  
-  .slider-track {
-    display: flex;
-    animation: scroll 40s linear infinite;
+
+  .logo-item {
+    width: 100px;
+    height: 70px;
+    padding: 5px;
   }
-  
-  .frame {
-    position: relative;
-    width: 1310.73px;
-    height: 116.34px;
-    display: flex;
-    align-items: center;
-    gap: 36px;
-  }
-  
-  .client-logo {
-    object-fit: contain;
-  }
-  
-  .ae {
-    width: 227.17px;
-    height: 65px;
-  }
-  
-  .acuity {
-    width: 155px;
-    height: 116.34px;
-  }
-  
-  .group-logo {
-    width: 310px;
-    height: 60.07px;
-    /* Add your group logo styling here */
-  }
-  
-  .lhn {
-    width: 153px;
-    height: 86.06px;
-  }
-  
-  .atkins {
-    width: 136.56px;
-    height: 76px;
-  }
-  
-  .vmart {
-    width: 149px;
-    height: 87.66px;
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-1310.73px); /* Width of one frame */
-    }
-  }
+}

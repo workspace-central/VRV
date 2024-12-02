@@ -1,38 +1,42 @@
 import React from "react";
 import "./Footer.css";
-
+import { navigation } from "../constants";
+import { footer } from "../constants";
+import { useState,useEffect } from "react";
 const Footer = () => {
+  const [activeNav, setActiveNav] = useState("#home");
+  useEffect(() => {
+    const handleHashChange = () => {
+      setActiveNav(window.location.hash || "#home");
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
   return (
     <footer className="footer">
       <div className="footer-wrapper">
-        {/* Main Content */}
         <div className="content">
-          {/* Logo Section */}
           <div className="logo-container">
             <div className="logo">
-              <div className="logo-text">VRV SECURITY</div>
             </div>
           </div>
-
-          {/* Navigation Links */}
-          <nav className="nav-links">
-            <a href="#" className="nav-link">
-              Home
-            </a>
-            <a href="#" className="nav-link">
-              Services
-            </a>
-            <a href="#" className="nav-link">
-              About Us
-            </a>
-            <a href="#" className="nav-link">
-              Blog
-            </a>
-          </nav>
+          <div className="nav">
+            {navigation.map((navItem) => (
+              <a
+                key={navItem.id}
+                href={navItem.url}
+                className={`nav1 ${
+                  activeNav === navItem.url ? "active" : ""
+                }`}
+              >
+                {navItem.title}
+              </a>
+            ))}
+          </div>
 
           {/* Social Links */}
           <div className="social-links">
-            <a href="#" className="linkedin-icon"></a>
+            <a href="https://www.linkedin.com/company/vrv-security" className="linkedin-icon"></a>
           </div>
         </div>
 
@@ -41,17 +45,17 @@ const Footer = () => {
           <div className="divider"></div>
           <div className="credits-row">
             <span className="copyright">
-              © 2024 VRV Security. All rights reserved.
+              {footer[5].text}
             </span>
             <div className="footer-links">
               <a href="#" className="footer-link">
-                Privacy Policy
+                {footer[6].text}
               </a>
               <a href="#" className="footer-link">
-                Terms of Service
+                {footer[7].text}
               </a>
               <a href="#" className="footer-link">
-                Cookie Policy
+              {footer[8].text}
               </a>
             </div>
           </div>
