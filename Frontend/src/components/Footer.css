@@ -33,7 +33,7 @@
   text-align: center;
 }
  .logo{
-  background: ur('./logo.png') no-repeat center center
+  background: ur('../../public/assets/lg.png') no-repeat center center
  }
 .logo-text {
   font-family: "Playfair Display", serif;

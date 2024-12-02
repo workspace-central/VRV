@@ -1,51 +1,49 @@
 import React from 'react';
 import './AboutUs.css';
+import { aboutUs } from '../constants';
 // import aboutImage from './././../../public/assets/About.png';
 
 export default function AboutUs() {
   return (
-    <section id = "about-us" className="about-section">
-      <div className="about-content">
-        <h2 className="about-title">About Us</h2>
-        <p className="about-description">
-          We are dedicated to securing the digital world with innovative cybersecurity solutions, 
-          powered by AI and cloud technologies. Our customized approach ensures robust protection 
-          for modern digital infrastructures.
-        </p>
+    <section id="About-Us" className="about-section">
+  <div className="about-container">
+    <div className="about-content">
+      {aboutUs.map((item) => {
+        if (item.id === 0) {
+          return (
+            <div key={item.id} className="content-item">
+              <h2 className="about-title">{item.title}</h2>
+              {item.text.map((text, idx) => (
+                <p key={idx} className="about-description">
+                  {text}
+                </p>
+              ))}
+            </div>
+          );
+        } else {
+          const dynamicTitle = `title${item.id}`;
+          const dynamicText = `text${item.id}`;
 
-        <div className="content">
-          <div className="content-item">
-            <h3>Extensive Global Presence</h3>
-            <p>Operating across multiple continents to meet diverse client needs.</p>
-          </div>
+          return (
+            <div key={item.id} className="content-item">
+              <h3>{item[dynamicTitle]}</h3>
+              {item[dynamicText]?.map((text, idx) => (
+                <p key={idx}>{text}</p>
+              ))}
+            </div>
+          );
+        }
+      })}
+    </div>
+    <div className="decorative-image">
+      <img
+        src="/assets/About.png"
+        alt="Decorative Element"
+        className="decorative-image"
+      />
+    </div>
+  </div>
+</section>
 
-          <div className="content-item">
-            <h3>Focused on Protection</h3>
-            <p>Committed to safeguarding businesses with reliable, scalable, and efficient solutions.</p>
-          </div>
-
-          <div className="content-item">
-            <h3>Experienced Team</h3>
-            <p>Skilled professionals dedicated to maintaining high standards in digital security.</p>
-          </div>
-
-          <div className="content-item">
-            <h3>Innovative Technology</h3>
-            <p>We leverage AI and cloud technologies to combat modern cyber threats.</p>
-          </div>
-
-          <div className="content-item">
-            <h3>Global Leader in Cybersecurity</h3>
-            <p>VRV Security delivers advanced, AI-driven cybersecurity solutions worldwide.</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="decorative-elements">
-        <div className="decorative-image">
-          <img src='/assets/About.png' alt="Decorative Element" />
-        </div>
-      </div>
-    </section>
   );
 }

@@ -1,68 +1,91 @@
-import React, { useState } from 'react';
-import './Faq.css';
+"use client";
 
-const FAQ = () => {
-  const [expandedItem, setExpandedItem] = useState(0);
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import React from "react";
+import "./Faq.css";
 
-  const faqItems = [
-    {
-      question: "What security measures do you implement?",
-      answer: "We employ state-of-the-art encryption, regular security audits, and multi-factor authentication to ensure your data remains protected at all times."
-    },
-    {
-      question: "How do you handle data privacy?",
-      answer: "Your privacy is our priority. We follow strict GDPR compliance and industry best practices."
-    },
-    {
-      question: "What support options are available?",
-      answer: "24/7 technical support through multiple channels including phone, email, and live chat."
-    },
-    {
-      question: "Do you offer custom solutions?",
-      answer: "Yes, we provide tailored solutions to meet your specific security needs."
-    }
-  ];
+
+const faqs = [
+  {
+    question: "How does VRV Security protect against emerging cyber threats?",
+    answer:
+      "VRV Security stays ahead of emerging threats with advanced threat intelligence, machine learning, and real-time monitoring. Our experts continually update systems with the latest threat data, providing proactive defenses and tailored strategies to keep your business secure.",
+  },
+  {
+    question:
+      "What makes VRV Security different from other cybersecurity providers?",
+    answer:
+      "Our unique combination of advanced AI-driven solutions, 24/7 expert monitoring, and customized security frameworks sets us apart. We provide comprehensive protection while ensuring seamless integration with your existing systems.",
+  },
+  {
+    question: "How can I assess the cybersecurity risks for my business?",
+    answer:
+      "We offer comprehensive risk assessment services that evaluate your current security posture, identify potential vulnerabilities, and provide actionable recommendations for strengthening your defenses.",
+  },
+  {
+    question:
+      "How does VRV Security ensure secure remote access for our teams?",
+    answer:
+      "We implement multi-factor authentication, encrypted connections, and continuous monitoring to ensure secure remote access. Our solutions adapt to your team's needs while maintaining the highest security standards.",
+  },
+];
+
+export default function Faq() {
+  const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="faq-section">
-      <h1 className="title">Frequently Asked Questions</h1>
-      <p className="description">
-        Our FAQ section provides clear answers to common questions, helping you find solutions quickly and efficiently. 
-        Get the support you need, backed by expert insights and regional expertise.
-      </p>
+    <div className="faq-container">
+      {/* Background image */}
+      <div className="background-circle top-right" />
+      <div className="background-circle bottom-left" />
 
-      {faqItems.map((item, index) => (
-        <div 
-          key={index} 
-          className={`accordion-item ${expandedItem === index ? 'expanded' : ''}`} 
-          onClick={() => setExpandedItem(expandedItem === index ? null : index)}
-        >
-          <div className={`question ${expandedItem === index ? 'expanded' : ''}`}>
-            {item.question}
-            <div className={`expand-arrow ${expandedItem === index ? 'expanded' : ''}`}></div>
-          </div>
-          {expandedItem === index && <div className="answer">{item.answer}</div>}
+      <div className="faq-content">
+        <h1 className="faq-title">Frequently Asked Questions</h1>
+        <p className="faq-description">
+          Our FAQ section provides clear answers to common questions, helping
+          you find solutions quickly and efficiently. Get the support you need,
+          backed by expert insights and regional expertise.
+        </p>
+
+        <div className="faq-accordion">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`faq-item ${openIndex === index ? "open" : ""}`}
+            >
+              <button
+                onClick={() => setOpenIndex(index === openIndex ? -1 : index)}
+                className="faq-question"
+              >
+                <span>{faq.question}</span>
+                <ChevronDown
+                  className={`faq-icon ${openIndex === index ? "rotated" : ""}`}
+                />
+              </button>
+              <div
+                className={`faq-answer ${
+                  openIndex === index ? "expanded" : ""
+                }`}
+              >
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-
-      <div className="customer-service-frame">
-        <img 
-          src='/assets/ae' 
-          alt="Customer Service"
-        />
-        <h3>Need Additional Help?</h3>
-        <p>Contact our support team for personalized assistance</p>
-        <button className="email-button">Shoot a direct email</button>
       </div>
 
-      <div className="decorative-line"></div>
-      <div className="decorative-line-rotate"></div>
-      <div className="decorative-line-rotate-3"></div>
-      <div className="decorative-line-left"></div>
-      <div className="decorative-line-rotate-left"></div>
-      <div className="decorative-line-rotate-top"></div>
-    </section>
+      <div className="faq-contact">
+        <div className="contact-box">
+          <div className="contact-dot" />
+          <h2 className="contact-title">Do you have more questions?</h2>
+          <p className="contact-description">
+            Our team is here to help. Reach out for quick answers and
+            personalized support!
+          </p>
+          <button className="contact-button">Shoot a direct email</button>
+        </div>
+      </div>
+    </div>
   );
-};
-
-export default FAQ;
+}

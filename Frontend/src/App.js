@@ -6,10 +6,11 @@ import AboutUs from "./components/AboutUs";
 import Service from "./components/Service";
 import Contact from "./components/ContactUs";
 import Client from './components/Clients'; 
-// import FAQ from "./components/Faq";
-// import GlobalPresence from "./components/GlobalPresence";
+import FAQ from "./components/Faq";
+import GlobalPresence from "./components/GlobalPresence";
 import Footer from "./components/Foot";
 import Trusted from './components/Trusted';
+import Newsletter from "./components/Newsletter";
 
 export default function Layout() {
   return (
@@ -41,16 +42,20 @@ export default function Layout() {
                   <Service />
                 </div>
 
-                {/* <div className="Global-section">
+                <div className="Global-section">
                   <GlobalPresence />
-                </div> */}
+                </div>
                 
-                {/* <div className="Faq-section">
+                <div className="Faq-section">
                   <FAQ />
-                </div> */}
+                </div>
 
                 <div className="Client-section">
                   <Client />
+                </div>
+
+                <div className="Newsletter-section">
+                  <Newsletter />
                 </div>
 
                 {/* Footer Section */}
