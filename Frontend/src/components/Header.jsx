@@ -20,13 +20,15 @@ export default function Header() {
   };
 
   return (
-    <div>
+    <div className="header-container">
       {/* Hamburger Menu */}
       <div className="hamburger" onClick={toggleSidebar}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
+
+      {/* Main Card */}
       <div className="card">
         <div className="card-body">
           <div className="logo-container">
@@ -56,18 +58,16 @@ export default function Header() {
               Clients
             </span>
           </div>
-
-          {/* "Contact Us" button */}
-          <button
-            className="contact-button desktop-only"
-            onClick={() => navigate("/contact")}
-          >
-            Contact Us
-          </button>
         </div>
-        
       </div>
 
+      {/* "Contact Us" Button for Desktop */}
+      <button
+        className="contact-button desktop-only"
+        onClick={() => navigate("/contact")}
+      >
+        Contact Us
+      </button>
 
       {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
