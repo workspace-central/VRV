@@ -1,0 +1,206 @@
+.about-section {
+  position: relative; /* Keeps the section in document flow */
+  width: 100%;
+  max-width: 1280px;
+  margin: 50px auto; /* Dynamic spacing from other sections */
+  padding: 20px;
+  box-sizing: border-box;
+  background: #100C08;
+  overflow-x: hidden; /* Only hides horizontal overflow to allow vertical scrolling */
+}
+
+  .about-content {
+    padding: 27px 21px;
+  }
+  
+  .about-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem; /* Responsive font size */
+    line-height: 1.2;
+    color: #F5F5F5;
+    margin-bottom: 50px;
+  }
+  
+  .about-description {
+    width: 100%;
+    max-width: 634px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem; /* Responsive font size */
+    line-height: 1.4;
+    text-align: justify;
+    color: #F5F5F5;
+    margin-bottom: 57px;
+  }
+  
+  .content-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Reduced gap between h3 and p */
+  }
+  
+  .content-item h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem; /* Responsive font size */
+    line-height: 1.4; /* Adjusted line-height for better spacing */
+    color: #F5F5F5;
+  }
+  
+  .content-item p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem; /* Responsive font size */
+    line-height: 0.4;
+    color: #F5F5F5;
+  }
+
+  
+  /* Decorative Elements */
+  .decorative-image {
+    position: relative; /* Ensure it respects parent flow */
+    margin-top: 70px; /* Adjust this value as needed */
+  }
+  .decorative-elements {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 100%; /* Make it responsive */
+    max-width: 467px;
+    height: auto;
+    overflow: hidden; /* Ensure no overflow from decorative elements */
+  }
+  .decorative-image img {
+    display: block;
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+  }
+  .main-vector {
+    position: absolute;
+    width: 467px;
+    height: 467px;
+    left: 734px;
+    top: 225px;
+  }
+  
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .about-title {
+      font-size: 2rem;
+    }
+  
+    .about-description,
+    .content {
+      width: 100%;
+    }
+  
+    .decorative-elements {
+      display: none; /* Hide decorative elements on smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 16px;
+      margin-top: 30px; /* Adjust spacing for smaller screens */
+    }
+  
+    .about-title {
+      font-size: 1.75rem;
+      margin-bottom: 30px;
+    }
+  
+    .about-description {
+      font-size: 0.875rem;
+      margin-bottom: 40px;
+    }
+  
+    .content-item h3 {
+      font-size: 1.25rem;
+    }
+  
+    .content-item p {
+      font-size: 0.875rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-section {
+      padding: 12px;
+      margin: 20px auto;
+      text-align: center;
+      overflow-x: hidden;
+      max-height: 100vh;
+      overflow-y: auto;
+    }
+  
+    .about-title {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .about-description {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      text-align: justify;
+      overflow-wrap: break-word;
+    }
+  
+    .content {
+      gap: 20px;
+      display: flex;
+      flex-wrap: wrap; /* Allow wrapping to the next row */
+      justify-content: space-between;
+      text-align: center;
+    }
+  
+    .content-item {
+      width: 48%; /* Adjust to fit two items in one row */
+      margin-bottom: 20px;
+    }
+  
+    .content-item h3 {
+      font-size: 1rem;
+      margin-bottom: 10px; /* Reduced margin-bottom to decrease spacing between h3 and p */
+    }
+  
+    .content-item p {
+      font-size: 0.875rem;
+      line-height: 1.4;
+      margin-top: 0; /* Remove any top margin on p tag to reduce space */
+    }
+  
+    /* Adjust the decorative image to be on the right */
+    .decorative-elements {
+      display: flex;
+      justify-content: space-between; /* Space out content and image */
+      align-items: center;
+      margin-top: 20px;
+      width: 100%;
+    }
+  
+    .decorative-image {
+      width: 40%; /* Adjust the image width */
+      height: auto;
+    }
+  
+    .decorative-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      margin: 193px;
+      margin-top: 101px;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+  }
+  
+  
+  

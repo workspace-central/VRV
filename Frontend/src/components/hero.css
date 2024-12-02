@@ -5,13 +5,17 @@
     min-height: 100vh;
     background: url('4.png') no-repeat center center;
     background-size: cover;
+    background-attachment: fixed; /* Prevent background duplication */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
     gap: clamp(1.5rem, 3vw, 2.5rem);
+    box-sizing: border-box;
+    overflow: hidden;
 }
+
 
 .hero-title {
     width: min(90%, 857px);
@@ -90,11 +94,11 @@
     width: clamp(25px, 5vw, 40px); /* Scale width */
     height: clamp(45px, 7vw, 60px); /* Scale height */
     margin: auto;
-    border: 2px solid #5D5D5D;
+    border: 2px solid white;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    transform: translateY(-70%);
+    transform: translateY(-20%);
     justify-content: center;
 }
 
@@ -105,7 +109,7 @@
     left: 50%;
     width: clamp(5px, 1vw, 6px); /* Scale based on viewport */
     height: clamp(10px, 1.5vw, 12px); /* Scale based on viewport */
-    background-color: #5D5D5D;
+    background-color: white;
     border-radius: 2px;
     animation: scroll-wheel-animation 2s ease-in-out infinite;
     transform: translateX(-50%);
@@ -193,8 +197,8 @@
     }
 
     .mouse-icon .mouse {
-        width: clamp(15px, 3vw, 30px); /* Further scale down */
-        height: clamp(30px, 5vw, 45px); /* Further scale down */
+        width: clamp(28px, 11vw, 30px);
+        height: clamp(50px, -49vw, 45px); /* Further scale down */
     }
 
     .mouse-icon .scroll-wheel {

@@ -1,0 +1,167 @@
+.faq-section {
+  margin: 40px auto;
+  width: 100%;
+  max-width: 1280px;
+  background: #F5F5F5;
+  padding: 20px 20px; /* Reduced padding (less space around content) */
+  height: 700px; /* Set a fixed height to shorten the section */
+  overflow: hidden; /* Hide overflow content if any */
+}
+
+.faq-section .title {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 113%;
+  color: #100C08;
+}
+
+.faq-section .description {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  color: #100C08;
+  margin-top: 16px;
+}
+
+.faq-section .accordion-item {
+  width: 100%;
+  max-width: 601px;
+  margin-top: 16px;
+  background: transparent;
+  border: 1px solid #100C08;
+  border-radius: 20px 0px;
+}
+
+.faq-section .accordion-item.expanded {
+  height: 168px;
+  background: #100C08;
+}
+
+.faq-section .question {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #100C08;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-section .question.expanded {
+  color: #F5F5F5;
+}
+
+.faq-section .answer {
+  font-family: 'Inter';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  color: #F5F5F5;
+  padding: 0 16px 16px 16px;
+}
+
+.faq-section .expand-arrow {
+  width: 10.56px;
+  height: 6.45px;
+  transform: rotate(0deg);
+}
+
+.faq-section .expand-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+.faq-section .expand-arrow::before, 
+.faq-section .expand-arrow::after {
+  content: '';
+  position: absolute;
+  background: #000000;
+  height: 1px;
+}
+
+.faq-section .expand-arrow::before {
+  width: 8.49px;
+  transform: rotate(45deg);
+  left: 0;
+  top: 0.45px;
+}
+
+.faq-section .expand-arrow::after {
+  width: 7.81px;
+  transform: rotate(131deg);
+  left: 10.56px;
+  top: 0;
+}
+
+.faq-section .customer-service-frame {
+  width: 100%;
+  max-width: 411px;
+  height: 480px;
+  position: relative; /* Ensure positioning works correctly */
+  left: 50%;
+  transform: translate(30%, -95%);
+  background: #100C08;
+  border-radius: 125px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.faq-section .email-button {
+  padding: 16px 50px;
+  gap: 10px;
+  width: 100%;
+  max-width: 251px;
+  height: 54px;
+  background: #F5F5F5;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #100C08;
+  margin-top: 16px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .faq-section {
+    padding: 20px;
+  }
+
+  .faq-section .title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .faq-section .description {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .faq-section .accordion-item {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .faq-section .customer-service-frame {
+    width: 80%;
+    max-width: 360px;
+    height: 380px;
+    top: 10px;
+    
+  }
+
+  .faq-section .email-button {
+    width: 80%;
+    max-width: 230px;
+    margin-top: 20px;
+  }
+  
+}
