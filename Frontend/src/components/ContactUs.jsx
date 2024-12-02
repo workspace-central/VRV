@@ -69,33 +69,6 @@ const ContactUs = () => {
             At VRV Security, we embed advanced security measures directly into your critical workflows, ensuring seamless protection against evolving threats. Our operation-focused approach safeguards data, systems, and processes while maintaining business continuity. With real-time threat detection and tailored solutions, we align security with your operations to empower your success in a digital-first world.
             </p>
             <div className="support-section">
-              {/* <div className="line-right-container">
-                <h2>Support</h2>
-                <div className="line-right">
-                  <div className="line"></div>
-                  <div className="circle"></div>
-                </div>
-              </div> */}
-
-              {/* <h3>Phone Support (English)</h3>
-              <div className="number-list">
-                <div className="number">
-                  <span>India: +91 9876543210</span>
-                </div>
-                <div className="number">
-                  <span>US: +1 9876543210</span>
-                </div>
-                <div className="number">
-                  <span>UK: +44 9876543210</span>
-                </div>
-                <div className="number">
-                  <span>Singapore: +65 9876543210</span>
-                </div>
-              </div>
-              <div className="chat-section">
-                <h3>Chat With Us</h3>
-                <button className="chat-button">CHAT</button>
-              </div> */}
             </div>
           </div>
         </div>
