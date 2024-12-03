@@ -11,13 +11,13 @@ const Footer = () => {
             <a href="#home" className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
               Home
             </a>
-            <a href="#about" className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
+            <a href="#About-Us" className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
               About Us
             </a>
             <a href="#services" className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
               Services
             </a>
-            <a href="#clients" className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
+            <a href="#trusted-section" className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
               Clients
             </a>
           </nav>

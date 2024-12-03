@@ -41,7 +41,7 @@ export default function Header() {
             </Link>
             <span
               className="nav-link"
-              onClick={() => navigateToSection("#about-us")}
+              onClick={() => navigateToSection("#About-Us")}
             >
               About Us
             </span>
@@ -53,7 +53,7 @@ export default function Header() {
             </span>
             <span
               className="nav-link"
-              onClick={() => navigateToSection("#testimonials")}
+              onClick={() => navigateToSection("#trusted-section")}
             >
               Clients
             </span>
