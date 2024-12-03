@@ -2,6 +2,8 @@ import React from 'react';
 import './Trusted.css';
 
 const Trusted = () => {
+  const logos = ['vmart.png', 'ae.png', 'acuity.png', 'k.png', 'lhn.png', 'atkins.png'];
+
   return (
     <section className="trusted-section">
       <div className="header">
@@ -16,18 +18,14 @@ const Trusted = () => {
         </div>
       </div>
       <div className="logos-container">
-        <div className="logos-track">
-          {['vmart.png', 'ae.png', 'acuity.png', 'k.png', 'lhn.png', 'atkins.png'].map((logo, index) => (
-            <div key={index} className="logo-item">
-              <img src={`/assets/${logo}`} alt={logo.split('.')[0]} />
-            </div>
-          ))}
-          {['vmart.png', 'ae.png', 'acuity.png', 'k.png', 'lhn.png', 'atkins.png'].map((logo, index) => (
-            <div key={index + 6} className="logo-item">
-              <img src={`/assets/${logo}`} alt={logo.split('.')[0]} />
-            </div>
-          ))}
-        </div>
+      <div className="logos-track">
+  {logos.concat(logos).map((logo, index) => (
+    <div key={index} className="logo-item">
+      <img src={`/assets/${logo}`} alt={logo.split('.')[0]} />
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );

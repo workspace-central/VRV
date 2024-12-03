@@ -84,11 +84,11 @@ export default function Clients() {
       {/* Decorative Lines */}
       <div className="w-[1270.02px] h-[1039.18px] left-[3px] top-[25.94px] absolute">
         <div className="w-[110px] h-[0px] left-[1234px] top-[0.06px] absolute origin-top-left rotate-90 border-4 border-neutral-100/60"></div>
-        <div className="w-[110px] h-[0px] left-[36.02px] top-[1039.12px] absolute origin-top-left -rotate-90 border-4 border-neutral-100/60"></div>
+        <div className="w-[110px] h-[0px] left-[40.02px] top-[1039.12px] absolute origin-top-left -rotate-90 border-4 border-neutral-100/60"></div>
         <div className="w-[349.12px] h-[0px] left-[1269.58px] top-[349.12px] absolute origin-top-left -rotate-90 border-4 border-neutral-100/60"></div>
-        <div className="w-[349.12px] h-[0px] left-[0.44px] top-[690.06px] absolute origin-top-left rotate-90 border-4 border-neutral-100/60"></div>
+        <div className="w-[349.12px] h-[0px] left-[6.44px] top-[690.06px] absolute origin-top-left rotate-90 border-4 border-neutral-100/60"></div>
         <div className="w-[341.04px] h-[0px] left-[936.90px] top-[1.00px] absolute border-4 border-neutral-100/60"></div>
-        <div className="w-[341.04px] h-[0px] left-[335.04px] top-[1040.58px] absolute origin-top-left rotate-180 border-4 border-neutral-100/60"></div>
+        <div className="w-[341.04px] h-[0px] left-[340.04px] top-[1040.58px] absolute origin-top-left rotate-180 border-4 border-neutral-100/60"></div>
       </div>
 
       {/* Testimonial Cards */}

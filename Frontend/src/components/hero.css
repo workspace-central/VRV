@@ -117,12 +117,33 @@
 
 /* Scroll Down Text */
 .mouse-icon .scroll-down {
-    margin-top: 10px;
+    margin-top: 50px;
     font-family: 'Poppins', sans-serif;
     font-size: clamp(10px, 2vw, 14px); /* Scale based on viewport */
     color: #FFFFFF;
     text-align: center;
 }
+
+.scroll-wheel {
+    animation: scroll-wheel-animation 2s ease-in-out infinite;
+  }
+  
+  /* Scroll Animation */
+  @keyframes scroll-wheel-animation {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(5px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+  }
+  
 
 /* Scroll Animation */
 @keyframes scroll-wheel-animation {

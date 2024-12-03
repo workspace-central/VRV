@@ -16,20 +16,28 @@ export default function Hero() {
       <div className="hero-buttons">
         <button className="hero-button">Book a Demo</button>
       </div>
-      <img
+      {/* <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/06ecc16b05a178e03cc45a40c499fba3d225569fad51f73aab95a388b65a0658?placeholderIfAbsent=true&apiKey=babe1e364d7c491d9ab530c1da4ff133"
         alt=""
         className="object-contain z-10 self-center mt-6 max-w-full aspect-[0.87] w-[103px]"
-      />
+      /> */}
+      
 
       {/* Mouse Icon with Scroll Down Text */}
-      <div className="mouse-icon">
-        <div className="mouse">
-          <div className="scroll-wheel"></div>
-        </div>
-        <div className="scroll-down">Scroll Down</div>
-      </div>
+      {/* <div className="mouse-icon">
+      <div className="image-wrapper relative flex justify-center items-center">
+  <img
+    loading="lazy"
+    src="https://cdn.builder.io/api/v1/image/assets/TEMP/06ecc16b05a178e03cc45a40c499fba3d225569fad51f73aab95a388b65a0658?placeholderIfAbsent=true&apiKey=babe1e364d7c491d9ab530c1da4ff133"
+    alt=""
+    className="object-contain z-10 self-center mt-6 max-w-full aspect-[0.87] w-[103px]"
+  />
+  <div className="scroll-wheel absolute bottom-[10%] w-4 h-8 bg-white rounded-lg"></div>
+</div>
+
+        <div className="scroll-down">Scroll Down</div> */}
+      {/* </div> */}
     </section>
   );
 }
