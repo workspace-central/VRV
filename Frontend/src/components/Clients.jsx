@@ -1,5 +1,5 @@
 import React from 'react';
-import './Clients.css'; // Importing the CSS for styling
+import starIcon from './star.png'; // Importing the CSS for styling
 
 const clients = [
   {
@@ -59,28 +59,82 @@ const clients = [
 ];
 
 export default function Clients() {
-  return (
-    <section id="clients" className="clients-section">
-      <div className="clients-content">
-        <h2 className="clients-title">Hear From Our Satisfied Clients</h2>
-        <p className="clients-description">
-        Our "Hear From Our Satisfied Clients" section showcases real experiences and testimonials, highlighting the value we bring to our clients. Discover how our expertise and commitment have made a difference across regions.
-        </p>
-
-        <div className="clients-list">
-          {clients.map(client => (
-            <div key={client.id} className="client-card">
-              <div className="rating">{"★".repeat(client.rating)}</div>
-              <div className="client-header">
-                <img src={client.image} alt={client.name} className="client-image" />
-                <h3>{client.name}, {client.location}</h3>
-              </div>
-              <h4>Service: {client.service}</h4>
-              <p>{client.description}</p>
-            </div>
-          ))}
+  const renderStars = () => (
+    <div className="h-[18.50px] justify-start items-start gap-[6.53px] inline-flex">
+      {[...Array(5)].map((_, index) => (
+        <div key={index} className="w-[19.59px] h-[18.50px] justify-center items-center flex">
+          <div className="w-[19.59px] h-[18.50px] justify-center items-center inline-flex">
+            <img className="w-[19.59px] h-[18.50px]" src={starIcon} alt="star" />
+          </div>
         </div>
+      ))}
+    </div>
+  );
+
+  return (
+    <div className="w-[1280px] h-[1127px] relative">
+      {/* Header Section */}
+      <div className="left-[16px] top-[40px] absolute text-[#f4f4f4] text-5xl font-semibold font-['Inter'] leading-[57.60px]">
+        Hear From Our Satisfied Clients
       </div>
-    </section>
+      <div className="w-[736px] left-[16px] top-[122px] absolute text-justify text-[#f4f4f4] text-base font-normal font-['Inter'] leading-normal">
+        Our "Hear From Our Satisfied Clients" section showcases real experiences and testimonials, highlighting the value we bring to our clients. Discover how our expertise and commitment have made a difference across regions.
+      </div>
+
+      {/* Decorative Lines */}
+      <div className="w-[1270.02px] h-[1039.18px] left-[3px] top-[25.94px] absolute">
+        <div className="w-[110px] h-[0px] left-[1234px] top-[0.06px] absolute origin-top-left rotate-90 border-4 border-neutral-100/60"></div>
+        <div className="w-[110px] h-[0px] left-[36.02px] top-[1039.12px] absolute origin-top-left -rotate-90 border-4 border-neutral-100/60"></div>
+        <div className="w-[349.12px] h-[0px] left-[1269.58px] top-[349.12px] absolute origin-top-left -rotate-90 border-4 border-neutral-100/60"></div>
+        <div className="w-[349.12px] h-[0px] left-[0.44px] top-[690.06px] absolute origin-top-left rotate-90 border-4 border-neutral-100/60"></div>
+        <div className="w-[341.04px] h-[0px] left-[936.90px] top-[1.00px] absolute border-4 border-neutral-100/60"></div>
+        <div className="w-[341.04px] h-[0px] left-[335.04px] top-[1040.58px] absolute origin-top-left rotate-180 border-4 border-neutral-100/60"></div>
+      </div>
+
+      {/* Testimonial Cards */}
+      {clients.map((client, index) => {
+        const positions = [
+          { left: '142px', top: '216px' },
+          { left: '683px', top: '216px' },
+          { left: '142px', top: '494px' },
+          { left: '683px', top: '494px' },
+          { left: '142px', top: '772px' },
+          { left: '683px', top: '772px' },
+        ];
+
+        return (
+          <div key={client.id} className="w-[456px] h-[253px] absolute" style={positions[index]}>
+            <div className="w-[456px] h-[270px] absolute bg-[#4c4c4c]/10 rounded-[15px] border-2 border-white backdrop-blur-[35px]" />
+            
+            {/* Rating Stars */}
+            <div className="left-[23px] top-[24px] absolute">
+              {renderStars()}
+            </div>
+
+            {/* Client Info */}
+            <div className="left-[23px] top-[60px] absolute justify-start items-center gap-2 inline-flex">
+              <img 
+                className="w-[71.11px] h-10 rounded-[63px]" 
+                src={client.image} 
+                alt={client.name} 
+              />
+              <div className="py-[3px] flex flex-col">
+                <span className="text-[#f4f4f4] text-base font-bold font-['Inter'] leading-relaxed">
+                  {client.name}, {client.location}
+                </span>
+                <span className="text-[#f4f4f4] text-xs font-medium font-['Inter'] leading-tight">
+                  Service provided - {client.service}
+                </span>
+              </div>
+            </div>
+
+            {/* Testimonial Text */}
+            <div className="w-[408px] left-[23px] top-[122px] absolute text-justify text-[#f4f4f4] text-base font-normal font-['Inter'] leading-snug">
+              {client.description}
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }

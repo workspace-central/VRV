@@ -3,7 +3,7 @@ import './Trusted.css';
 
 const Trusted = () => {
   return (
-    <section id="trusted-section"className="trusted-section">
+    <section className="trusted-section">
       <div className="header">
         <div className="line-left">
           <div className="line"></div>

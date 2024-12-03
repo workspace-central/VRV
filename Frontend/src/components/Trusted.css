@@ -1,7 +1,6 @@
-/* Trusted Section */
 .trusted-section {
   background-color: white;
-  padding: 40px 20px;
+  padding: 40px 1px;
   width: 100%;
   text-align: center;
 }
@@ -56,14 +55,13 @@
   margin-top: 40px;
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .logos-track {
   display: flex;
-  gap: 20px;
-  animation: scroll-left 15s linear infinite;
+  gap: 10px;
+  animation: scroll-loop 5s linear infinite;
+; /* Ensure it spans twice the width */
 }
 
 .logo-item {
@@ -85,13 +83,13 @@
   height: 100%;
 }
 
-/* Animation */
-@keyframes scroll-left {
-  from {
+/* Infinite Scrolling Animation */
+@keyframes scroll-loop {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(-50%);
+  100% {
+    transform: translateX(-8%);
   }
 }
 
