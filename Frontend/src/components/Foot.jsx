@@ -1,6 +1,16 @@
 import React from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const navigateToSection = (hash) => {
+    if (window.location.pathname !== "/") {
+      navigate("/");
+    }
+    setTimeout(() => {
+      document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+    }, 100); // Ensure the home page is loaded before scrolling
+  };
   return (
     <footer className="w-[1300px] h-[374px] relative">
       <div className="w-[1280px] h-[364px] px-16 py-20 left-[10px] top-[10px] absolute bg-[#f4f4f4] flex flex-col justify-start items-center gap-20">
@@ -8,16 +18,16 @@ const Footer = () => {
         <div className="self-stretch justify-start items-center gap-8 flex">
           <div className="grow shrink basis-0 flex flex-col justify-start items-start gap-6"></div>
           <nav className="justify-center items-center gap-8 flex">
-            <a href="#home" className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
+            <a href="#home" onClick={() => navigateToSection("#home")} className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
               Home
             </a>
-            <a href="#About-Us" className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
+            <a href="#About-Us" onClick={() => navigateToSection("##About-Us")} className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
               About Us
             </a>
-            <a href="#services" className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
+            <a href="#services" onClick={() => navigateToSection("#services")} className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
               Services
             </a>
-            <a href="#trusted-section" className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
+            <a href="#trusted-section" onClick={() => navigateToSection("#trusted-section")} className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
               Clients
             </a>
           </nav>
@@ -56,7 +66,7 @@ const Footer = () => {
         <img
     src="favicon.ico" // Replace with your image path
     alt="Logo"
-    className="w-[60.79px] h-[45.97px] absolute left-[-2.21px] top-0 object-contain"
+    className="w-[60.79px] h-[45.97px] absolute left-[-5.21px] top-0 object-contain"
   />
         </div>
       </div>
