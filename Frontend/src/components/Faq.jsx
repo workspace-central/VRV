@@ -35,10 +35,15 @@ export default function Faq() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 flex flex-col lg:flex-row gap-12 bg-white relative overflow-hidden">
       {/* Background image */}
-      <div className="absolute w-[754px] h-[754px] left-[calc(50%-754px/2+595px)] top-[calc(50%-754px/2)] bg-cover bg-no-repeat opacity-25 z-0" 
-     style={{ backgroundImage: "url(bg-circle.jpeg)" }}>
-</div>
-
+      <div className="absolute top-0 right-0 w-96 h-96 opacity-25 z-0">
+        <img
+          src="bg-circle.jpeg"
+          alt="Decorative technical circle design"
+          width={500}
+          height={500}
+          className="object-contain m-24"
+        />
+      </div>
       <div className="absolute bottom-0 left-0 w-96 h-96 opacity-10 z-0">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -118,13 +123,9 @@ export default function Faq() {
             Our team is here to help. Reach out for quick answers and
             personalized support!
           </p>
-          <button
-  className="w-full bg-white text-black py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
-  onClick={() => window.location.href = "mailto:support@vrvsecurity.in"}
->
-  Shoot a direct email
-</button>
-
+          <button className="w-full bg-white text-black py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+            Shoot a direct email
+          </button>
         </div>
       </div>
     </div>
