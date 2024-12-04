@@ -15,6 +15,18 @@ export default function ContactPage() {
           button.style.color = '#100C08';
         }
       }, []);
+      useEffect(() => {
+        const card = document.querySelector('.card');
+        const parentDiv = card.closest('.bg-white'); // Find the parent div with the white background class
+    
+        if (parentDiv && window.getComputedStyle(parentDiv).backgroundColor === 'rgb(255, 255, 255)') {
+          card.style.background = 'rgba(0, 0, 0, 0.8)'; // Darker background
+          card.style.color = '#ffffff'; // White text
+        } else {
+          card.style.background = 'rgba(255, 255, 255, 0.8)'; // Lighter background
+          card.style.color = '#000000'; // Black text
+        }
+      }, []);  
 
 
   return (
@@ -36,7 +48,7 @@ export default function ContactPage() {
               <div className="Ellipse262 w-[52.61px] h-[52.61px] left-[12.80px] top-[12.80px] absolute rounded-full border border-[#f4f4f4]" />
               <div className="Ellipse264 w-16 h-16 left-[7.11px] top-[7.11px] absolute rounded-full border border-[#f4f4f4]" />
             </div>
-            <img className="Subtract w-[272.03px] h-[178.81px] left-[20.12px] top-[314.19px] absolute rounded-[5.08px] shadow" src="https://via.placeholder.com/272x179" />
+            <img className="Subtract w-[272.03px] h-[178.81px] left-[20.12px] top-[314.19px] absolute rounded-[5.08px] shadow" src="/assets/2.png" />
           </div>
           <div className="ServiceContent h-[377px] left-0 top-[102px] absolute flex-col justify-end items-start gap-10 inline-flex">
           <div className="Frame1171275930 h-[270px] flex-col justify-start items-start gap-8 inline-flex">
@@ -75,7 +87,7 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="ImageBink w-[205.08px] h-[223.73px] left-[738px] top-[82px] absolute flex-col justify-center items-center inline-flex">
-            <img className="w-[205.08px] h-[223.73px] rounded-[9.32px] shadow" src="https://via.placeholder.com/205x224" />
+            <img className="w-[205.08px] h-[224.73px] rounded-[9.32px] shadow" src="/assets/1.png" />
           </div>
         </div>
     <Footer />
