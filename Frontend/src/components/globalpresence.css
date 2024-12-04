@@ -1,0 +1,58 @@
+
+  
+  /* Container for the map */
+  .map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height to center the map vertically */
+    padding: 20px;
+    overflow-x: hidden;
+    width:100%
+  }
+
+  /* Arrow styles */
+.Arrows .arrow-line {
+  border-top: 2px dotted rgba(245, 245, 245, 0.6);
+}
+
+.Arrows .arrow-head {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 8px 4px 0;
+  border-color: transparent #f4f4f4 transparent transparent;
+  position: absolute;
+}
+  
+  /* Responsive map image */
+  .responsive-map {
+    width: 100%; /* Takes full width of the container */
+    max-width: 1280px; /* Limit the size for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners *//* Optional: Subtle shadow */
+    margin-left: -38px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .map-container {
+      padding: 10px;
+    }
+  
+    .responsive-map {
+      max-width: 100%; /* Map fits smaller screen widths */
+      margin-left: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .map-container {
+      padding: 5px;
+    }
+  
+    .responsive-map {
+      max-width: 100%; /* Adjust for extra small screens */
+    }
+  }
+  

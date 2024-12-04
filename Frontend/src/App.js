@@ -5,11 +5,15 @@ import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import Service from "./components/Service";
 import Contact from "./components/ContactUs";
-import Faq from "./components/FAQ";
-import GlobalPresence from "./components/Map.tsx";
-//import Global from "./components/Global";
-// import Footer from "./components/Foot";
-// import Trusted from './components/Trusted';
+import Client from './components/Clients'; 
+import FAQ from "./components/Faq";
+import GlobalPresence from "./components/GlobalPresence";
+import Footer from "./components/Foot";
+import Trusted from './components/Trusted';
+import Newsletter from "./components/Newsletter";
+import Services from "./pages/Services";
+import Services_we_offer from "./pages/Services_we_offer";
+import Business_feel_insecure from "./pages/Business_feel_insecure";
 
 export default function Layout() {
   return (
@@ -27,9 +31,9 @@ export default function Layout() {
                 </div>
 
                 {/* Trusted Section */}
-                {/* <div className="Client-section">
+                <div className="Client-section">
                   <Trusted />
-                </div> */}
+                </div>
 
                 {/* About Us Section */}
                 <div className="AboutUs-section">
@@ -41,17 +45,25 @@ export default function Layout() {
                   <Service />
                 </div>
 
-                {/* Footer Section */}
-                {/* <div className="Footer-section">
-                  <Footer />
-                </div> */}
-
-                <div className="global-presence">
+                <div className="Global-section">
                   <GlobalPresence />
                 </div>
-
+                
                 <div className="Faq-section">
-                  <Faq />
+                  <FAQ />
+                </div>
+
+                <div className="Client-section">
+                  <Client />
+                </div>
+
+                <div className="Newsletter-section">
+                  <Newsletter />
+                </div>
+
+                {/* Footer Section */}
+                <div className="Footer-section">
+                  <Footer />
                 </div>
               </main>
             }
@@ -59,6 +71,13 @@ export default function Layout() {
 
           {/* Contact Us Route */}
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={
+            <div>
+            <Services />
+            <Services_we_offer />
+            <Business_feel_insecure />
+            </div>
+          } />
         </Routes>
       </Router>
     </div>

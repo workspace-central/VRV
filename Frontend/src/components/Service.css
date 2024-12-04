@@ -73,11 +73,11 @@
   }
   
   .service-card.cloud-security {
-    background: #222;
+    background: black;
   }
   
   .service-card.compliance {
-    background: #333;
+    background: black;
   }
   
   .service-card.infrastructure {

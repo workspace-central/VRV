@@ -16,7 +16,10 @@ const Service = () => {
           </p>
           <div className="view-services">
             <span>View all services</span>
-            <div className="arrow"></div>
+            <img 
+      src="/assets/arrow.png" 
+      alt="Arrow Icon" 
+    />
           </div>
         </div>
       </div>
