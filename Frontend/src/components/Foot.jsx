@@ -52,11 +52,11 @@ const Footer = () => {
       </div>
       {/* Logo and Branding */}
       <div className="w-10 h-[49.71px] left-[68px] top-[76px] absolute">
-        <div className="w-[31.79px] h-[29.97px] left-[8.21px] top-0 absolute">
+        <div className="w-[60.79px] h-[45.97px] left-[-3.21px] top-0 absolute">
         <img
     src="favicon.ico" // Replace with your image path
     alt="Logo"
-    className="w-[31.79px] h-[29.97px] absolute left-[-2.21px] top-0 object-contain"
+    className="w-[60.79px] h-[45.97px] absolute left-[-2.21px] top-0 object-contain"
   />
         </div>
       </div>
