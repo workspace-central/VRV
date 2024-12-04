@@ -11,6 +11,7 @@ import GlobalPresence from "./components/GlobalPresence";
 import Footer from "./components/Foot";
 import Trusted from './components/Trusted';
 import Newsletter from "./components/Newsletter";
+import Services from "./pages/Services";
 
 export default function Layout() {
   return (
@@ -68,6 +69,7 @@ export default function Layout() {
 
           {/* Contact Us Route */}
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </Router>
     </div>
