@@ -10,6 +10,20 @@
     overflow-x: hidden;
     width:100%
   }
+
+  /* Arrow styles */
+.Arrows .arrow-line {
+  border-top: 2px dotted rgba(245, 245, 245, 0.6);
+}
+
+.Arrows .arrow-head {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 8px 4px 0;
+  border-color: transparent #f4f4f4 transparent transparent;
+  position: absolute;
+}
   
   /* Responsive map image */
   .responsive-map {

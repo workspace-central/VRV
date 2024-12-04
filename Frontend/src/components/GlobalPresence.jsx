@@ -1,135 +1,105 @@
-// "use client";
+"use client";
 
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import React from "react";
 
-// import React from "react";
+export default function GlobalPresence() {
+  const [isVisible, setIsVisible] = useState(false);
 
-// export default function GlobalPresence() {
-//   const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-//   useEffect(() => {
-//     setIsVisible(true);
-//   }, []);
-
-//   return (
-//     <div className="bg-black text-white h-screen w-screen overflow-hidden flex flex-col p-4 md:p-8">
-//       <div className="flex-1 flex flex-col max-w-7xl mx-auto w-full">
-//         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-4">
-//           Our Global Presence
-//         </h1>
-
-//         <p className="text-sm md:text-base lg:text-lg max-w-2xl mb-4 md:mb-8 text-gray-300">
-//           We serve clients worldwide, offering innovative solutions backed by a
-//           network of experts and local partners to deliver tailored support for
-//           every region.
-//         </p>
-
-//         <div className="relative flex-1 w-full">
-//           {/* Map Container */}
-//           <div className="absolute inset-0">
-//             <img
-//               src="Map.png"
-//               alt="World Map"
-//               className="object-contain w-full h-full opacity-55"
-//             />
-//           </div>
-
-//           {/* Stats Overlays */}
-//           {isVisible && (
-//             <>
-//               {/* Top Right Stat */}
-//               <div className="absolute top-0 right-0 max-w-[20vw]">
-//                 <div className="flex items-baseline gap-1 mb-1">
-                  
-//                   <span className="font-mono text-3xl md:text-4xl lg:text-5xl">
-//                     12
-//                   </span>
-//                   <span className="text-xl md:text-2xl lg:text-3xl">+</span>
-//                 </div>
-//                 <p className="text-xs md:text-sm leading-tight text-white">
-//                   Countries across five continents, with a strong Global Reach,
-//                   offering tailored cybersecurity solutions to ensure top tier
-//                   protection.
-//                 </p>
-//               </div>
-
-//               {/* Left Side Stat */}
-//               <div className="absolute left-0 max-w-[20vw] ml-20">
-//                 <div className="pt-0 font-mono text-3xl md:text-4xl lg:text-5xl tracking-wider">
-//                   200
-//                 </div>
-//                 <p className="text-xs md:text-sm leading-tight text-white">
-//                   International clients, including{" "}
-//                   <span className="italic">Fortune 500</span> companies and{" "}
-//                   <span className="italic">government agencies</span>.
-//                 </p>
-                
-//               </div>
-
-//               {/* Bottom Left Stat */}
-//               <div className="mt-44 pl-0 bottom-60 left-0 max-w-[20vw] ml-20">
-//                 <div className="font-mono text-2xl md:text-3xl lg:text-4xl tracking-wider mb-1">
-//                   1,000,000
-//                 </div>
-//                 <p className="text-xs md:text-sm leading-tight text-white">
-//                   Our solution provides real-time threat detection and{" "}
-//                   <span className="italic">robust</span> protection for your
-//                   devices worldwide, securing{" "}
-//                   <span className="italic">endpoints</span> globally over
-//                 </p>
-                
-//               </div>
-
-//               {/* Bottom Center Stat */}
-//               <div className="absolute bottom-0 left-2/3 -translate-x-1/2 max-w-[30vw] text-center">
-//                 <p className="text-xs md:text-sm mb-1 text-white">
-//                   Provides Proactive Monitoring with rate
-//                 </p>
-//                 <div className="font-mono text-3xl md:text-4xl lg:text-5xl tracking-wider mb-0">
-//                   500,000+
-//                 </div>
-//                 <p className="text-xs md:text-sm leading-tight text-white">
-//                   hours of annual threat surveillance, ensuring real-time,
-//                   consistent defense against cyber risks for optimal security.
-//                 </p>
-                
-//               </div>
-
-//               {/* Right Side Stat */}
-//               <div className="absolute  right-0 max-w-[20vw] text-right">
-//                 <p className="text-xs md:text-sm -mb-28 text-white ">
-//                   Recognized as a trusted leader in cybersecurity innovation and
-//                   excellence, we have a valuation reaching
-//                 </p>
-//                 <div className="flex items-baseline gap-1 justify-end ">
-//                   <span className="text-xl md:text-2xl lg:text-3xl">$</span>
-//                   <span className="font-mono text-3xl pt-0 md:text-4xl lg:text-5xl tracking-wider">
-//                     400
-//                   </span>
-//                   <span className="text-lg md:text-xl lg:text-2xl">M</span>
-//                 </div>
-//               </div>
-//             </>
-//           )}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-import "./globalpresence.css"; // Import the CSS file
-
-const GlobalPresence = () => {
   return (
-    <div className="map-container">
-      <img
-        src="/assets/Map.png"
-        alt="World Map"
-        className="responsive-map"
-      />
+    <div className="GlobalPresence w-[1280px] h-[1049px] relative bg-[#100c08]">
+      <div className="OurGlobalPresence left-[16px] top-[49px] absolute text-[#f4f4f4] text-5xl font-bold font-['Inter'] leading-[54.24px]">
+        Our Global Presence
+      </div>
+      
+      <div className="WeServeClientsWorldwideOfferingInnovativeSolutionsBackedByANetworkOfExpertsAndLocalPartnersToDeliverTailoredSupportForEveryRegion w-[649px] left-[23px] top-[128px] absolute text-[#f4f4f4] text-base font-normal font-['Inter'] leading-snug">
+        We serve clients worldwide, offering innovative solutions backed by a network of experts and local partners to deliver tailored support for every region.
+      </div>
+
+      <div className="Map w-[620px] h-[497.77px] left-[330px] top-[307px] absolute">
+        <img src="Map.png" alt="World Map" className="w-full h-full opacity-55" />
+      </div>
+
+      {isVisible && (
+        <>
+
+          <div className="Group1 w-[257px] h-[119px] left-[34px] top-[321px] absolute">
+            <div className="left-0 top-0 absolute text-[#f4f4f4] text-5xl font-normal font-['Digital Numbers'] leading-[54.24px]">200</div>
+            <div className="InternationalClientsIncludingFortune500CompaniesAndGovernmentAgencies w-[250px] left-[7px] top-[62px] absolute text-justify">
+              <span className="text-[#f4f4f4] text-sm font-normal font-['Inter'] leading-[18.60px]">International clients, including </span>
+              <span className="text-[#f4f4f4] text-sm font-normal font-['Lucida Handwriting'] leading-[18.60px]">Fortune 500</span>
+              <span className="text-[#f4f4f4] text-sm font-normal font-['Inter'] leading-[18.60px]"> companies and </span>
+              <span className="text-[#f4f4f4] text-sm font-normal font-['Lucida Handwriting'] leading-[18.60px]">government agencies.</span>
+            </div>
+          </div>
+
+          <div className="w-[297px] h-[61px] left-[35px] top-[720px] absolute text-[#f4f4f4] text-5xl font-normal font-['Digital Numbers'] leading-[54.24px]">
+            1,000,000
+          </div>
+
+          <div className="w-[255px] h-[104.12px] left-[41px] top-[789.94px] absolute text-justify">
+            <span className="text-[#f4f4f4] text-sm font-medium font-['Inter'] leading-tight">Our solution provides real-time threat detection and </span>
+            <span className="text-[#f4f4f4] text-sm font-normal font-['Lucida Handwriting'] leading-tight">robust</span>
+            <span className="text-[#f4f4f4] text-sm font-medium font-['Inter'] leading-tight"> protection for your devices worldwide, securing </span>
+            <span className="text-[#f4f4f4] text-sm font-normal font-['Lucida Handwriting'] leading-tight">endpoints</span>
+            <span className="text-[#f4f4f4] text-sm font-medium font-['Inter'] leading-tight"> globally over</span>
+          </div>
+
+          <div className="IntClients w-[301px] h-[150px] left-[896px] top-[128px] absolute">
+            <div className="left-[px] top-[3px] absolute">
+              <span className="text-[#f4f4f4] text-5xl font-normal font-bold shadow-lg leading-[54.24px] ">12</span>
+              <span className="text-[#f4f4f4] text-5xl font-normal font-['Inter'] leading-[54.24px]">+</span>
+            </div>
+            <div className="w-[310px] left-[5px] top-[62px] absolute text-justify text-[#f4f4f4] text-base font-normal font-['Inter'] leading-snug">
+              Countries across five continents, with a strong Global Reach, offering tailored cybersecurity solutions to ensure top tier protection for businesses worldwide.
+            </div>
+          </div>
+
+          <div className="Validation w-[319px] h-32 left-[935px] top-[586px] absolute">
+            <div className="w-[319px] h-14 left-0 top-0 absolute text-justify">
+              <span className="text-[#f4f4f4] text-base font-medium font-['Inter'] leading-snug">
+                Recognized as a trusted leader in cybersecurity innovation and excellence, we have a valuation reaching
+              </span>
+            </div>
+            <div className="left-[27px] top-[69px] absolute text-[#f4f4f4] text-5xl font-normal font-['Digital Numbers'] leading-[54.24px]">400</div>
+            <div className="left-0 top-[74px] absolute text-[#f4f4f4] text-5xl font-normal font-['Poppins'] leading-[54.24px]">$ </div>
+            <div className="Million left-[115px] top-[95px] absolute text-[#f4f4f4] text-base font-normal font-['Inter'] leading-[18.08px]">Million</div>
+          </div>
+
+          <div className="PMonitoring w-[434px] h-[163px] left-[423px] top-[845px] absolute">
+            <div className="w-[405.43px] left-[12.24px] top-[-0px] absolute text-[#f4f4f4] text-base font-normal font-['Inter'] leading-snug">
+              Provides Proactive Monitoring with rate 
+            </div>
+            <div className="w-[421.76px] left-[12.24px] top-[97px] absolute text-justify text-[#f4f4f4] text-base font-normal font-['Inter'] leading-snug">
+              hours of annual threat surveillance, ensuring real-time, consistent defense against cyber risks for optimal security.
+            </div>
+            <div className="w-[363.25px] left-2.5 top-[26px] absolute">
+              <span className="text-[#f4f4f4] text-5xl font-normal font-['Digital Numbers'] leading-[67.20px]">500,000</span>
+              <span className="text-[#f4f4f4] text-5xl font-normal font-['Inter'] leading-[67.20px]">+</span>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
-};
+}
 
-export default GlobalPresence;
+// import "./globalpresence.css"; // Import the CSS file
+
+// const GlobalPresence = () => {
+//   return (
+//     <div className="map-container">
+//       <img
+//         src="/assets/Map.png"
+//         alt="World Map"
+//         className="responsive-map"
+//       />
+//     </div>
+//   );
+// };
+
+// export default GlobalPresence;
