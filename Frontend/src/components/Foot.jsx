@@ -21,7 +21,7 @@ const Footer = () => {
             <a href="#home" onClick={() => navigateToSection("#home")} className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
               Home
             </a>
-            <a href="#About-Us" onClick={() => navigateToSection("##About-Us")} className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
+            <a href="#About-Us" onClick={() => navigateToSection("#About-Us")} className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
               About Us
             </a>
             <a href="#services" onClick={() => navigateToSection("#services")} className="text-[#100c08] text-base font-semibold font-['Roboto'] leading-normal">
