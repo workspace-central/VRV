@@ -25,7 +25,7 @@ const clients = [
     name: 'CNA Financial',
     location: 'US',
     service: 'Compliance audits',
-    description: 'CNA Financial\'s compliance audit solutions are robust and easy to implement, ensuring seamless integration across teams. Their proactive updates and dedicated support make managing compliance straightforward and efficient.',
+    description: 'VRV Security\'s compliance audit solutions are robust and easy to implement, ensuring seamless integration across teams. Their proactive updates and dedicated support make managing compliance straightforward and efficient.',
     rating: 5,
     image: '/assets/cna.png', // Correct path to your image
   },

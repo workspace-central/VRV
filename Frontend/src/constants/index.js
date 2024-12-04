@@ -166,7 +166,7 @@ export const testimonials = [
         id:3,
         companyName:"CNA Financial, US",
         text1:["US Service provided - Compliance audits"],
-        text2:["CNA Financial's compliance audit solutions are robust and easy to implement, ensuring seamless integration across teams. Their proactive updates and dedicated support make managing compliance straightforward and efficient."]
+        text2:["VRV Security's compliance audit solutions are robust and easy to implement, ensuring seamless integration across teams. Their proactive updates and dedicated support make managing compliance straightforward and efficient."]
     },
     {
         id:4,
