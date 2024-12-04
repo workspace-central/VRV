@@ -2,6 +2,15 @@ import * as React from "react";
 import { newsLetter } from "../constants";
 
 export default function Newsletter() {
+  // Ref for the input box
+  const emailInputRef = React.useRef(null);
+
+  const handleJoinNow = () => {
+    if (emailInputRef.current) {
+      emailInputRef.current.value = ""; // Clear the input box
+    }
+  };
+
   return (
     <section
       className="NewsletterSection w-[1280px] h-[393px] relative flex-col justify-start items-start inline-flex"
@@ -11,9 +20,8 @@ export default function Newsletter() {
         <div className="Container w-[1264px] h-[203px] pr-[35px] justify-start items-start gap-[97px] inline-flex">
           {/* Heading */}
           <div className="Heading grow shrink basis-0 text-white text-5xl font-bold font-['Inter'] leading-[57.60px] p-[12px]">
-    {newsLetter[0].title}
-</div>
-
+            {newsLetter[0].title}
+          </div>
 
           {/* Content */}
           <div className="Content grow shrink basis-0 flex-col justify-start items-start gap-6 inline-flex">
@@ -32,6 +40,7 @@ export default function Newsletter() {
                     id="email"
                     placeholder="Enter your email"
                     required
+                    ref={emailInputRef} // Attach ref to the input box
                     className="w-full bg-transparent text-[#4f4f4f] text-base font-normal font-['Roboto'] leading-normal outline-none"
                   />
                 </div>
@@ -56,7 +65,8 @@ export default function Newsletter() {
               {/* Submit Button */}
               <div className="Frame53 px-8 py-3.5 left-[378px] top-[21px] absolute bg-white justify-center items-center gap-2.5 inline-flex">
                 <button
-                  type="submit"
+                  type="button"
+                  onClick={handleJoinNow} // Call the function to clear input
                   className="JoinNow text-[#100c08] text-base font-normal font-['Inter'] leading-snug"
                 >
                   Join Now

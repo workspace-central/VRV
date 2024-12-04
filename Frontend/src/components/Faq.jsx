@@ -118,9 +118,13 @@ export default function Faq() {
             Our team is here to help. Reach out for quick answers and
             personalized support!
           </p>
-          <button className="w-full bg-white text-black py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
-            Shoot a direct email
-          </button>
+          <button
+  className="w-full bg-white text-black py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+  onClick={() => window.location.href = "mailto:support@vrvsecurity.in"}
+>
+  Shoot a direct email
+</button>
+
         </div>
       </div>
     </div>

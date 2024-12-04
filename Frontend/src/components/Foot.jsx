@@ -23,7 +23,7 @@ const Footer = () => {
           </nav>
           <div className="grow shrink basis-0 h-6 justify-end items-center gap-3 flex">
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/company/vrv-security/"
               className="w-6 h-6 bg-center bg-no-repeat bg-cover"
               style={{ backgroundImage: "url('/assets/linkedin.png')" }}
             ></a>
@@ -54,7 +54,7 @@ const Footer = () => {
       <div className="w-10 h-[49.71px] left-[68px] top-[76px] absolute">
         <div className="w-[31.79px] h-[29.97px] left-[8.21px] top-0 absolute">
         <img
-    src="/assets/lg.png" // Replace with your image path
+    src="favicon.ico" // Replace with your image path
     alt="Logo"
     className="w-[31.79px] h-[29.97px] absolute left-[-2.21px] top-0 object-contain"
   />
