@@ -1,12 +1,12 @@
 import Navbar from "../components/Header";
-import Footer from "../components/Foot"
+import Footer from "../components/Foot";
 
 export default function ContactPage() {
 
 
   return (
     <div>
-    <div className="flex flex-col items-center w-full max-md:max-w-full bg-white">
+    <div className="flex flex-col items-center w-full max-md:max-w-full bg-white pt-8">
       <Navbar />
       <div className="SHeroSection w-[1238px] h-[552px] relative">
           <div className="ServiceImages w-[556.12px] h-[497px] left-[661px] top-[19px] absolute">
