@@ -1,7 +1,18 @@
 import * as React from "react";
 import "./hero.css";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
+  const navigateToSection = (hash) => {
+    if (window.location.pathname !== "/") {
+      navigate("/");
+    }
+    setTimeout(() => {
+      document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+    }, 100); // Ensure the home page is loaded before scrolling
+  };
   return (
     <section id = "home" className="hero-section" role="banner">
       <h1 className="hero-title">
@@ -14,7 +25,7 @@ export default function Hero() {
         protection against evolving threats.
       </p>
       <div className="hero-buttons">
-        <button className="hero-button">Book a Demo</button>
+        <button className="hero-button" onClick={() => navigate("/contact")}>Book a Demo</button>
       </div>
       {/* <img
         loading="lazy"

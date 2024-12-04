@@ -10,9 +10,10 @@ export default function Newsletter() {
       <div className="Rectangle w-[1280px] h-[393px] bg-[#4c4c4c]/10 from-[#100c08] via-[#4c4c4c] to-white rounded-[15px] border-2 border-white backdrop-blur-[35px] flex flex-col justify-center items-center">
         <div className="Container w-[1264px] h-[203px] pr-[35px] justify-start items-start gap-[97px] inline-flex">
           {/* Heading */}
-          <div className="Heading grow shrink basis-0 text-white text-5xl font-bold font-['Inter'] leading-[57.60px]">
-            {newsLetter[0].title}
-          </div>
+          <div className="Heading grow shrink basis-0 text-white text-5xl font-bold font-['Inter'] leading-[57.60px] p-[12px]">
+    {newsLetter[0].title}
+</div>
+
 
           {/* Content */}
           <div className="Content grow shrink basis-0 flex-col justify-start items-start gap-6 inline-flex">

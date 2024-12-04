@@ -5,7 +5,7 @@ const Trusted = () => {
   const logos = ['vmart.png', 'ae.png', 'acuity.png', 'k.png', 'lhn.png', 'atkins.png'];
 
   return (
-    <section className="trusted-section">
+    <section id='trusted-section' className="trusted-section">
       <div className="header">
         <div className="line-left">
           <div className="line"></div>
