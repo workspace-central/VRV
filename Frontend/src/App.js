@@ -12,6 +12,8 @@ import Footer from "./components/Foot";
 import Trusted from './components/Trusted';
 import Newsletter from "./components/Newsletter";
 import Services from "./pages/Services";
+import Services_we_offer from "./pages/Services_we_offer";
+import Business_feel_insecure from "./pages/Business_feel_insecure";
 
 export default function Layout() {
   return (
@@ -69,7 +71,13 @@ export default function Layout() {
 
           {/* Contact Us Route */}
           <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/services" element={
+            <div>
+            <Services />
+            <Services_we_offer />
+            <Business_feel_insecure />
+            </div>
+          } />
         </Routes>
       </Router>
     </div>
