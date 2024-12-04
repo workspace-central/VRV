@@ -37,9 +37,9 @@ export default function ContactPage() {
 
   return (
     <div>
-    <div className="flex flex-col items-center w-full max-md:max-w-full">
+    <div className="flex flex-col items-center w-full max-md:max-w-full pt-8">
       <Navbar />
-    <div className="min-h-screen bg-black text-white">
+    <div className="mt-4 min-h-screen bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
         {/* Left Column */}
         <div className="space-y-8">
