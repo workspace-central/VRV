@@ -35,7 +35,7 @@ export default function ContactPage() {
       <Navbar />
       <div className="SHeroSection w-[1238px] h-[552px] relative">
           <div className="ServiceImages w-[556.12px] h-[497px] left-[661px] top-[19px] absolute">
-            <img className="Subtract w-[205.08px] h-[223.73px] left-[312.49px] top-[172.66px] absolute rounded-sm shadow" src="https://via.placeholder.com/205x224" />
+            <img className="Subtract w-[205.08px] h-[223.73px] left-[312.49px] top-[172.66px] absolute rounded-sm shadow" src="/assets/3.png" />
             <div className="Circle1 w-[54.24px] h-[54.24px] left-[255px] top-0 absolute">
               <div className="Ellipse255 w-[54.24px] h-[54.24px] left-0 top-0 absolute bg-[#100c08] rounded-full" />
               <div className="Ellipse261 w-[27px] h-[27px] left-[14px] top-[14px] absolute bg-[#f4f4f4] rounded-full" />
