@@ -6,7 +6,7 @@ import AboutUs from "./components/AboutUs";
 import Service from "./components/Service";
 import Contact from "./components/ContactUs";
 import Client from './components/Clients'; 
-import FAQ from "./components/Faq";
+import FAQ from "./components/Faqs";
 import GlobalPresence from "./components/GlobalPresence";
 import Footer from "./components/Foot";
 import Trusted from './components/Trusted';
