@@ -1,7 +1,20 @@
+import React, { useEffect } from 'react';
 import Navbar from "../components/Header";
 import Footer from "../components/Foot";
 
 export default function ContactPage() {
+    useEffect(() => {
+        const button = document.querySelector('.contact-button');
+        const parentDiv = button.closest('.bg-white'); // Find the parent div with the white background class
+    
+        if (window.getComputedStyle(parentDiv).backgroundColor === 'rgb(255, 255, 255)') {
+          button.style.backgroundColor = '#100C08';
+          button.style.color = '#ffffff';
+        } else {
+          button.style.backgroundColor = '#ffffff';
+          button.style.color = '#100C08';
+        }
+      }, []);
 
 
   return (
