@@ -1,0 +1,195 @@
+.service-section {
+    position: relative;
+    width: 100%; /* Ensure it adapts to smaller screens */
+    max-width: 1280px; /* Maintain the width for larger screens */
+    height: auto;
+    margin: 0 auto;
+    background: #f5f5f5;
+    padding: 48px 16px;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .service-header h3 {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+  }
+  
+  .service-header h1 {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 113%;
+    color: #000000;
+    max-width: 418px;
+    margin-top: 30px;
+    margin-bottom: 16px;
+  }
+  
+  .service-intro {
+    position: absolute;
+    right: 16px;
+    top: 126px;
+    max-width: 397px;
+  }
+  
+  .view-services {
+    margin-top: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .arrow {
+    width: 5px;
+    height: 8px;
+    border: 2px solid #000000;
+  }
+  
+  .service-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 40px;
+  }
+  
+  .service-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow rows to wrap on smaller screens */
+    gap: 32px;
+  }
+  
+  .service-card {
+    margin-top: 40px;
+    padding: 40px;
+    color: #f5f5f5;
+    border-radius: 40px 0;
+    background: #000000;
+    flex: 1;
+    min-width: 300px; /* Ensure cards don't shrink too much */
+  }
+  
+  .service-card.cloud-security {
+    background: black;
+  }
+  
+  .service-card.compliance {
+    background: black;
+  }
+  
+  .service-card.infrastructure {
+    width: auto; /* Adjust for responsiveness */
+    flex: 1;
+  }
+  
+  .service-card.monitoring {
+    width: auto; /* Adjust for responsiveness */
+    flex: 2;
+    border-radius: 0 40px;
+  }
+  
+  .service-card h2 {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  
+  .service-card p {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: justify;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    .service-header h1 {
+      font-size: 64px; /* Reduce heading size */
+    }
+  
+    .service-header h3 {
+      font-size: 18px; /* Adjust subheading */
+    }
+  
+    .service-intro {
+      position: relative;
+      right: 0;
+      top: 0;
+      margin-top: 16px;
+      max-width: 100%;
+    }
+  
+    .service-row {
+      flex-wrap: wrap;
+      gap: 24px; /* Reduce gap for smaller screens */
+    }
+  
+    .service-card {
+      padding: 32px; /* Adjust padding for smaller devices */
+      border-radius: 32px 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-header h1 {
+      font-size: 48px;
+    }
+  
+    .service-header h3 {
+      font-size: 16px;
+    }
+  
+    .service-intro {
+      margin-top: 16px;
+      max-width: 100%;
+    }
+  
+    .service-row {
+      flex-direction: column; /* Stack cards vertically */
+    }
+  
+    .service-card {
+      padding: 24px;
+      margin-top: 24px; /* Reduce top margin for compact spacing */
+      border-radius: 24px 0;
+    }
+  
+    .service-card h2 {
+      font-size: 28px;
+    }
+  
+    .service-card p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-section {
+      padding: 24px 8px; /* Adjust padding for very small screens */
+    }
+  
+    .service-header h1 {
+      font-size: 36px;
+    }
+  
+    .service-header h3 {
+      font-size: 14px;
+    }
+  
+    .service-card {
+      padding: 16px;
+      border-radius: 16px 0;
+    }
+  
+    .service-card h2 {
+      font-size: 24px;
+    }
+  
+    .service-card p {
+      font-size: 12px;
+    }
+  }
+  
