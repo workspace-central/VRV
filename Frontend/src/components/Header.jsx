@@ -39,24 +39,24 @@ export default function Header() {
             <Link to="/" className="nav-link">
               Home
             </Link>
-            <span
+            <Link
               className="nav-link"
               onClick={() => navigateToSection("#About-Us")}
             >
               About Us
-            </span>
-            <span
+            </Link>
+            <button
               className="nav-link"
               onClick={() => navigate("/services")}
             >
               Services
-            </span>
-            <span
+            </button>
+            <Link
               className="nav-link"
               onClick={() => navigateToSection("#trusted-section")}
             >
               Clients
-            </span>
+            </Link>
           </div>
         </div>
       </div>
