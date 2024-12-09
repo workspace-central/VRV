@@ -1,9 +1,1 @@
-node_modules/
-npm-debug.log*
-package-lock.json
-logs/
-.env
-.env.*.local
-dist/
-build/
-public/
+node_modules

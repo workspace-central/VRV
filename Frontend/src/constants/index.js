@@ -19,11 +19,6 @@ export const navigation = [
         title: "Clients",
         url: "#Clients",
     },
-    {
-        id: "4",
-        title: "Contact Us",
-        url: "#Contact-Us",
-    },
 ];
 export const aboutUs = [
     {
@@ -33,30 +28,60 @@ export const aboutUs = [
     },
     {
         id: 1,
-        title: "Extensive Global Presence",
-        text: ["Operating across multiple continents to meet diverse client needs."],
+        title1: "Extensive Global Presence",
+        text1: ["Operating across multiple continents to meet diverse client needs."],
     },
     {
         id: 2,
-        title: "Focused on Protection",
-        text: ["Committed to safeguarding businesses with reliable,scalable and efficient solutions."],
+        title2: "Focused on Protection",
+        text2: ["Committed to safeguarding businesses with reliable,scalable and efficient solutions."],
     },
     {
         id: 3,
-        title: "Experienced Team",
-        text: ["Skilled professionals dedicated to maintaining high standards in digital security."],
+        title3: "Experienced Team",
+        text3: ["Skilled professionals dedicated to maintaining high standards in digital security."],
     },
     {
         id: 4,
-        title: "Innovative Technology",
-        text: ["We leverage AI and cloud technologies to combat modern cyber threats."],
+        title4: "Innovative Technology",
+        text4: ["We leverage AI and cloud technologies to combat modern cyber threats."],
     },
     {
         id: 5,
-        title: "Global Leader in Cybersecurity",
-        text: ["VRV Security delivers advanced,AI-driven cybersecurity solutions worldwide."],
+        title5: "Global Leader in Cybersecurity",
+        text5: ["VRV Security delivers advanced,AI-driven cybersecurity solutions worldwide."],
     },
 ];
+export const hero=[
+    {
+        id:0,
+        text:"Powering Your"
+    },
+    {
+        id:1,
+        text:"Growth"
+    },
+    {
+        id:2,
+        text:"with Unbreakable Security"
+    },
+    {
+        id:3,
+        text:"Protect your business with AI-driven cybersecurity, ensuring global protection against evolving threats."
+    },
+    {
+        id:4,
+        text:"Book a Demo"
+    },
+    {
+        id:5,
+        text:"Get Expert Advice"
+    },
+    {
+        id:6,
+        text:"Scroll Down"
+    }
+    ]
 export const services = [
     {
         id: 0,
@@ -141,7 +166,7 @@ export const testimonials = [
         id:3,
         companyName:"CNA Financial, US",
         text1:["US Service provided - Compliance audits"],
-        text2:["CNA Financial's compliance audit solutions are robust and easy to implement, ensuring seamless integration across teams. Their proactive updates and dedicated support make managing compliance straightforward and efficient."]
+        text2:["VRV Security's compliance audit solutions are robust and easy to implement, ensuring seamless integration across teams. Their proactive updates and dedicated support make managing compliance straightforward and efficient."]
     },
     {
         id:4,
@@ -167,3 +192,41 @@ export const newsLetter=[{
     title:"Join Our Newsletter Community",
     text:["Stay informed with the latest security insights,threat updates,and exclusive offers delivered straight to your inbox! Sign up now to ensure you never miss an essential update in cybersecurity"],
 }]
+export const footer=[
+    {
+        id:0,
+        text:"VRV SECURITY"
+    },
+    {
+        id:1,
+        text:"Home"
+    },
+    {
+        id:2,
+        text:"Services"
+    },
+    {
+        id:3,
+        text:"About Us"
+    },
+    {
+        id:4,
+        text:"Blog"
+    },
+    {
+        id:5,
+        text:"© 2024 VRV Security. All rights reserved."
+    },
+    {
+        id:6,
+        text:" Privacy Policy"
+    },
+    {
+        id:7,
+        text:"Terms of Service"
+    },
+    {
+        id:8,
+        text:"Cookie Policy"
+    }
+]
