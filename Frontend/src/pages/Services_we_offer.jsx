@@ -8,7 +8,7 @@ const services = [
   },
   {
     title: "Incident Response & Forensics",
-    description: "Delivered 80% faster recovery times for ransomware attacks compared to industry standards, VRV Security empowers organizations to protect critical operations. Our advanced recovery protocols powered by AI-driven insights to ensure rapid containment and allowing businesses to maintain continuity even in the face of sophisticated cyber threats.",
+    description: "Delivered 80% faster recovery times for ransomware attacks compared to industry standards, VRV security empowers organizations to protect critical operations. Our advanced recovery protocols powered by AI-driven insights to ensure rapid containment and allowing businesses to maintain continuity even in the face of sophisticated cyber threats.",
   },
   {
     title: "IoT and SCADA Security",
