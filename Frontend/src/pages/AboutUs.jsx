@@ -187,7 +187,7 @@ export default function ContactPage() {
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/3ad0d10661b78334d7d613805bc385b2678821223be01e3e84d2cfb7b5977d31?placeholderIfAbsent=true&apiKey=73970d97fb184e6092b54615a06b5f8b"
+              src=""
               alt="Core Values Illustration"
               className="object-contain grow w-full aspect-[1.24] max-md:max-w-full"
             />
@@ -255,7 +255,7 @@ export default function ContactPage() {
           <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/2e82a0e7c68d669009c6948d4bc577a3c69e39c0c7b085c4c56f9a92bdcdd88f?placeholderIfAbsent=true&apiKey=73970d97fb184e6092b54615a06b5f8b"
+              src=""
               alt="Vision Illustration"
               className="object-contain grow w-full aspect-[1.24] max-md:max-w-full"
             />
@@ -267,7 +267,7 @@ export default function ContactPage() {
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/bc8d9e8eb6002c2697fea6b55db8ca8047397f28ccd4892ebb5e1d27f08c352a?placeholderIfAbsent=true&apiKey=73970d97fb184e6092b54615a06b5f8b"
+              src=""
               alt="Mission Illustration"
               className="object-contain grow w-full aspect-[1.24] max-md:max-w-full"
             />
@@ -304,7 +304,7 @@ export default function ContactPage() {
   <div className="flex overflow-hidden flex-col px-20 pt-8 pb-16 mt-28 text-base leading-7 text-justify bg-neutral-100 text-stone-950 max-md:px-5 max-md:mt-10 max-md:max-w-full">
     <img
       loading="lazy"
-      src="https://cdn.builder.io/api/v1/image/assets/TEMP/3ec72a92d19ba5e6a4bff3789b626b1f04b7a1b87b6cb9d7ab6536e2147d490b?placeholderIfAbsent=true&apiKey=73970d97fb184e6092b54615a06b5f8b"
+      src=""
       alt="Vinod Kumar, CEO of VRV Security"
       className="object-contain self-center max-w-full aspect-[1.73] w-[698px]"
     />
@@ -342,7 +342,7 @@ export default function ContactPage() {
       <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
         <img
           loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a97358d5fd71a777bc6357474fe08291483d44550103f8177370d18ac70d634?placeholderIfAbsent=true&apiKey=73970d97fb184e6092b54615a06b5f8b"
+          src=""
           alt="VRV Security workforce visualization"
           className="object-contain grow w-full aspect-[1.64] max-md:mt-5 max-md:max-w-full"
         />
