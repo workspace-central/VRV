@@ -51,6 +51,7 @@ export default function FindService() {
     const card = document.querySelector('.card');
     const parentDiv = card.closest('.bg-white'); // Find the parent div with the white background class
     const card2 = document.querySelector('.footer');
+    const card3 = document.querySelector('.hamburger');
     const footerLinks = document.querySelectorAll('a, .span, .vrv');
     const linkedinIcon = document.querySelector('.linkedin a'); // Select the LinkedIn icon
     const stmlLine = document.querySelector('.STMLlines');
@@ -82,11 +83,15 @@ export default function FindService() {
       card.style.color = '#ffffff'; // White text
       card2.style.background = 'rgba(0, 0, 0, 0.8)'; // Darker background
       card2.style.color = '#ffffff'; // White text
+      card3.style.background = 'rgba(0, 0, 0, 0.8)'; // Darker background
+      card3.style.color = '#ffffff'; // White text
     } else {
       card.style.background = 'rgba(255, 255, 255, 0.8)'; // Lighter background
       card.style.color = '#000000'; // Black text
       card2.style.background = 'rgba(255, 255, 255, 0.8)'; // Lighter background
       card2.style.color = '#000000'; // Black text
+      card3.style.background = 'rgba(255, 255, 255, 0.8)'; // Lighter background
+      card3.style.color = '#000000'; // Black text
     }
   }, []);
 

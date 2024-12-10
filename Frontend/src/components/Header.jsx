@@ -39,12 +39,13 @@ export default function Header() {
             <Link to="/" className="nav-link">
               Home
             </Link>
-            <Link
+            <button
               className="nav-link"
-              onClick={() => navigateToSection("#About-Us")}
+              // onClick={() => navigateToSection("#About-Us")}
+              onClick={() => navigate("/About-US")}
             >
               About Us
-            </Link>
+            </button>
             <button
               className="nav-link"
               onClick={() => navigate("/services")}

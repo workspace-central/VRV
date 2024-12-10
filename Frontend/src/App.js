@@ -12,6 +12,7 @@ import Footer from "./components/Foot";
 import Trusted from './components/Trusted';
 import Newsletter from "./components/Newsletter";
 import Services from "./pages/Services";
+import AboutUss from "./pages/AboutUs";
 
 export default function Layout() {
   return (
@@ -72,6 +73,7 @@ export default function Layout() {
           <Route path="/services" element={
             <Services />
           } />
+          <Route path="/About-US" element={<AboutUss />} />
         </Routes>
       </Router>
     </div>
