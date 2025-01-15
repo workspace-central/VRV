@@ -59,10 +59,10 @@ export default function Layout() {
                 </div>
 
                 {/* Footer Section */}
-                <div className="Footer-section">
-                  <Footer />
-                </div>
-              </main>
+              //   <div className="Footer-section">
+              //     <Footer />
+              //   </div>
+              // </main>
             }
           />
 
